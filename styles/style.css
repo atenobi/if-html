@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/*
+общие
+теги
+служебные классы(контейнер,стили сетки, др.)
+классы
+
+ */
+
+
+
+.container {
+    max-width: 1232px;
+    padding: 51px 16px 0;
+    margin: 0 auto;
+}
+
+.top-section {
+    min-height: 100vh;
+    background-image: url("../images/background_image.jpg");
+}
+
+.header {
+    display: flex;
+}
+
+.header__logo {
+    margin-right: 684px;
+}
+
+.header__nav {
+    width: 303px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-section__content {
+    max-width: 1232px;
+    margin-top: 200px;
+}
+
+.top-section__title {
+    width: 542px;
+    height: 118px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+
+.top-section__form {
+    width: auto;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.top-section__town {
+    width: auto;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.top-section__date {
+    width: 259px;
+    border: 3px solid #F5BD41;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.top-section__button {
+    width: 192px;
+    border-radius: 8px;
+    background-color: #3077C6;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+/*
+    top-section- картинка фоном (минимальная высота 100wh)
+    header- разбить на блоки через 2 дива и через флекс развести по местам
+
+*/
