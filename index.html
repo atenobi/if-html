@@ -13,26 +13,97 @@
                     <img  src="./images/logo_triphouse.png" alt="logo"/>
                </a>
                 <div class="header__nav">
-                    <a href="#" title="stays">Stays</a>
-                    <a href="#" title="Attractions">Attractions</a>
-                    <a href="#"><img src="./images/night_button.png" alt="change theme"/></a>
-                    <a href="#"><img src="./images/account_circle.png" alt="profile"/></a>
+                    <a class="header__nav__link" href="#" title="stays">Stays</a>
+                    <a class="header__nav__link" href="#" title="Attractions">Attractions</a>
+                    <a class="header__nav__icon" href="#"><img src="./images/night_button.png" alt="change theme"/></a>
+                    <a class="header__nav__icon" href="#"><img src="./images/account_circle.png" alt="profile"/></a>
                 </div>
             </div>
             <div class="top-section__content">
                 <h2 class="top-section__title">Discover stays<br/> to live, work or just relax</h2>
                 <form class="top-section__form">
-                    <input class="top-section__town" placeholder="New York"/>
-                    <input class="top-section__date" type="date" name="boking_date" value="2021-01-01" min="2021-01-01" max="2022-01-01"/>
-                    <input  placeholder="1 2 3"/>
+                    <!-- думаю здесь нужен элемент before -->
+                    <label for="destination"></label>
+                    <input class="destination" id="destination" placeholder="New York"/>
+                    <input class="top-section__date" type="date" name="boking_date"
+                           value="2021-01-01" min="2021-01-01" max="2022-01-01"/>
+                    <input class="top-section__plaсes" placeholder="2 Adults — 0 Children — 1 Room"/>
                     <input class="top-section__button" type="button" value="Search"/>
                 </form>
                 <div class="top-section__store">
-
+                    <a class="top-section__shop" href="#" target="_blank"><img src="images/google_play.png" alt="google_play"/></a>
+                    <a class="top-section__shop" href="#" target="_blank"><img src="images/app_store.png" alt="app_store"/></a>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="offer_title">
+            <h2 class="offer_title_text">What do we offer</h2>
+        </div>
+        <div>
+            <hr class="offer_underline"/>
+        </div>
+          <div class="feedback__container">
+              <div class="icon_feedback">
+                  <a href="#"><img src="images/support.jpg" alt="support"/></a>
+                  <span class="icon_name">Support 24/7</span>
+              </div>
 
+              <div class="icon_feedback">
+                  <a href="#"><img src="images/comunicate_directly.jpg" alt="comunicate_directly"/></a>
+                  <span class="icon_name">Comunicate directly</span>
+              </div>
+
+              <div class="icon_feedback">
+                  <a href="#"><img src="images/book_online.jpg" alt="book_online"/></a>
+                  <span class="icon_name">Book online</span>
+              </div>
+
+              <div class="icon_feedback">
+                  <a href="#"><img src="images/real_guest_reviews.jpg" alt="real_quest_rewiews"/></a>
+                  <span class="icon_name">Real quests reviews</span>
+              </div>
+            </div>
+        </div>
+    <div class="footer">
+        <div class="container">
+             <div class="footer__body">
+
+                   <div>
+                       <ul>
+                          <li class="list__heading">About</li>
+                          <li>How Triphouse works</li>
+                          <li>Careers</li>
+                          <li>Privacy</li>
+                          <li>Terms</li>
+                      </ul>
+                   </div>
+
+                   <div>
+                      <ul>
+                          <li class="list__heading">Property types</li>
+                          <li>Guest houses</li>
+                          <li>Hotels</li>
+                          <li>Apartments</li>
+                          <li>Villas</li>
+                          <li>Holiday homes</li>
+                          <li>Hostels</li>
+                      </ul>
+                   </div>
+
+                   <div>
+                       <ul>
+                           <li class="list__heading">Support</li>
+                           <li>Contact Customer Service</li>
+                           <li>FAQ</li>
+                       </ul>
+                   </div>
+              </div>
+            <div class="copyright_holder">
+                <h4 class="copyright_holder__text">&copy; 2020 Triphouse, Inc. All rights reserved</h4>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

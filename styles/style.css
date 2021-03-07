@@ -1,19 +1,11 @@
+@import url("fonts.css");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    font-family: Roboto, sans-serif;
 }
-
-/*
-общие
-теги
-служебные классы(контейнер,стили сетки, др.)
-классы
-
- */
-
-
 
 .container {
     max-width: 1232px;
@@ -32,6 +24,8 @@
 
 .header__logo {
     margin-right: 684px;
+    width: 205px;
+    height: 40px;
 }
 
 .header__nav {
@@ -39,6 +33,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__nav__link {
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header__nav__link:hover {
+    border-bottom: 4px solid #F5BD41;
+}
+
+.header__nav__icon {
+    transition: 0.2s;
+}
+
+.header__nav__icon:hover {
+    transform: scale(1.3);
 }
 
 .top-section__content {
@@ -66,10 +79,11 @@
     box-sizing: border-box;
 }
 
-.top-section__town {
-    width: auto;
+.destination {
+    width: 400px;
     margin-left: 10px;
     font-size: 18px;
+    border-style: none;
 }
 
 .top-section__date {
@@ -79,16 +93,111 @@
     font-size: 18px;
 }
 
+.top-section__plaсes {
+    width: 300px;
+    border-style: none;
+}
+
 .top-section__button {
     width: 192px;
     border-radius: 8px;
+    border: none;
     background-color: #3077C6;
     color: #FFFFFF;
     font-size: 24px;
 }
 
-/*
-    top-section- картинка фоном (минимальная высота 100wh)
-    header- разбить на блоки через 2 дива и через флекс развести по местам
+.top-section__store {
+    margin-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: center;
+}
 
-*/
+.top-section__shop {
+    padding: 0 8px 0;
+}
+
+/*section №2 "advantages"*/
+.offer_title {
+    margin: 120px auto 0;
+    width: 306px;
+    height: 47px;
+}
+
+.offer_title_text {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #383838;
+}
+
+.offer_underline {
+    margin: 20px auto 0;
+    width: 100px;
+    height: 4px;
+    background-color: #F5BD41;
+    border: none;
+}
+
+.feedback__container {
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon_feedback {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 296px;
+    height: 185px;
+    align-items: center;
+}
+
+.icon_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color:  #383838;
+}
+
+/*Footer*/
+
+.footer{
+    max-width: 100vh;
+    min-height: 600px;
+    background-color: #10367C;
+}
+
+.footer__body {
+    display: flex;
+    justify-content: space-between;
+    height: 310px;
+}
+
+.list__heading {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.copyright_holder {
+    margin: 65px auto 120px;
+}
+
+.copyright_holder__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
