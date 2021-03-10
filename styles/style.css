@@ -22,7 +22,7 @@
 }
 
 .top-section {
-    min-height: 100vh;
+    max-height: 100vh;
     background-image: url("../images/background_image.png");
     background-position: top;
     background-color: #10367C;
@@ -217,6 +217,11 @@
     text-align: center;
     color:  #383838;
     text-decoration: none;
+    transition: 0.2s;
+}
+
+.icon_name:hover {
+    transform: scale(1.1);
 }
 
 /*Footer*/
@@ -271,10 +276,17 @@
     color: #FFFFFF;
 }
 
-@media only screen and (max-width: 480px) {
+/*@media only screen and (max-width: 1024px) {
     [class*="container"] {
-        width: 100%;
+        width: 1000px;
+    }
+    .top-section {
+        width: 100vh;
+    }
+
+    .header {
+     flex-flow: column wrap;
     }
 }
-
+*/
 
