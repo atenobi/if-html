@@ -22,7 +22,7 @@
 }
 
 .top-section {
-    max-height: 100vh;
+    max-height: 900px;
     background-image: url("../images/background_image.png");
     background-position: top;
     background-color: #10367C;
@@ -276,17 +276,6 @@
     color: #FFFFFF;
 }
 
-/*@media only screen and (max-width: 1024px) {
-    [class*="container"] {
-        width: 1000px;
-    }
-    .top-section {
-        width: 100vh;
-    }
 
-    .header {
-     flex-flow: column wrap;
-    }
-}
-*/
+
 
