@@ -253,7 +253,14 @@
     height: 385px;
 }
 
-.footer__list__conteiner {
+.footer__logo {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.footer__list__container {
     width: 31%;
     display: flex;
     justify-content: right;
@@ -293,4 +300,106 @@
 }
 
 
+/*adapt for gadgets*/
+@media only screen and (max-width: 380px) {
+    .top-section {
+        margin: 0 auto 170px;
+    }
+    .container {
+        width: 360px;
+        height: 641px;
+        margin: 40px auto;
+        padding: 0;
+    }
+    .offer_title {
+        margin: 40px auto 0;
+        padding-top: 25px;
+        width: 214px;
+        height: 33px;
+    }
+
+    .offer_title_text {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        color: var(--primary-text);
+    }
+
+    .offer_underline {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .feedback__container {
+        width: 214px;
+        height: 540px;
+        margin: 60px auto 0;
+    }
+
+    .icon_feedback {
+        margin: 0;
+    }
+
+    .icon__svg_container {
+        width: 214px;
+        height: 104px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column wrap;
+        margin: 0;
+    }
+
+    .icon__svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .icon_name {
+        font-size: 15px;
+    }
+    /*footer*/
+    .footer {
+        width: 360px;
+        height: 203px;
+        margin: 0 auto;
+    }
+
+    .footer__body {
+        width: 360px;
+        height: 203px;
+    }
+
+    .footer_logo_container {
+        width: 98px;
+        height: 20px;
+        margin: 40px auto 0;
+    }
+
+    .footer__logo {
+        width: 98px;
+        height: 20px;
+        fill: var(--general-white);
+        visibility: visible;
+    }
+
+    .footer__list__container {
+        margin: 0;
+    }
+
+    .list__heading {
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0;
+    }
+
+    .footer_link_list {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
 
