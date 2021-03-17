@@ -13,7 +13,7 @@
     --stroke: #F3F3F4;
     --background: #EAF0F9;
 
-
+    --col-width: calc(100% / 12);
 }
 
 * {
@@ -24,6 +24,19 @@
    /*border: 1px solid #FFFFFF;*/
 }
 
+.col-lg-1 { width: var(--col-width);}
+.col-lg-2 { width: calc(var(--col-width) * 2);}
+.col-lg-3 { width: calc(var(--col-width) * 3);}
+.col-lg-4 { width: calc(var(--col-width) * 4);}
+.col-lg-5 { width: calc(var(--col-width) * 5);}
+.col-lg-6 { width: 50%;}
+.col-lg-7 { width: calc(var(--col-width) * 7);}
+.col-lg-8 { width: calc(var(--col-width) * 8);}
+.col-lg-9 { width: calc(var(--col-width) * 9);}
+.col-lg-10 { width: calc(var(--col-width) * 10);}
+.col-lg-11 { width: calc(var(--col-width) * 2);}
+.col-lg-12 { width: 100%;}
+
 .sprite{
     position: absolute;
     visibility: hidden;
@@ -32,13 +45,13 @@
 }
 
 .block_body {
-    width: 100vw;
-    height: 100%;
+    max-width: 100vw;
+    max-height: 100%;
     margin: 0 auto;
 }
 
 .container {
-    width: 1264px;
+    max-width: 1264px;
     height: 100%;
     margin: 0 auto;
     padding: 0 16px;
@@ -67,7 +80,7 @@
 
 .top_section {
     width: 100vw;
-    height: 900px;
+    height: 902px;
     padding-top: 1px;
     background-color: var(--primary-dark);
     background-image: url('../images/background_image.jpg');
@@ -75,14 +88,14 @@
 }
 
 .top_section_header {
-    width: 1232px;
-    height: 46px;
+    max-width: 1232px;
+    max-height: 46px;
     margin-top: 50px;
 }
 
 .logo {
-    width: 207px;
-    height: 45px;
+    max-width: 207px;
+    max-height: 45px;
     fill: var(--primary);
 }
 
@@ -101,6 +114,8 @@
     margin-right: 24px;
     padding-top: 5px;
     height: 46px;
+    position: relative;
+    top: 5px;
     transition: 0.5s;
 }
 
@@ -140,9 +155,9 @@
 }
 
 .top_section_main_title {
-    width: 542px;
-    height: 118px;
-    margin-top: 200px;
+    max-width: 542px;
+    max-height: 118px;
+    margin: 200px 2px 0;
 }
 
 .ts_main_title_text {
@@ -153,17 +168,18 @@
 }
 
 .top_section_form {
-    width: 1232px;
+    max-width: 100%;
+    max-height: 100%;
     height: 64px;
     margin-top: 145px;
     display: flex;
     border-radius: 8px;
     background-color: var(--general-white);
+    justify-content: space-between;
 }
 
 .form_input_container {
-    box-sizing: content-box;
-    width: 1232px;
+
 }
 
 .form_input {
@@ -175,31 +191,67 @@
     outline: none;
 }
 
+.input_destination_label {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    bottom: 47px;
+    left: 27px;
+    color: var(--general-white);
+}
+.input_calendar_label {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    bottom: 47px;
+    right: 13px;
+    color: var(--general-white);
+}
+
+.input_label_2 {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 .destination {
+    position: relative;
+    bottom: 22px;
+    left: 0;
     width: 440px;
     margin-left: 30px;
     font-size: 18px;
 }
 
 .calendar {
+    position: relative;
+    bottom: 22px;
+    right: 36px;
     width: 259px;
     border: 3px solid var(--secondary);
 }
 
+.calendar_2 {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 .booking_places {
-    width: 310px;
+    width: 100%;
 }
 
 .form_button {
-    width: 192px;
+    width: 188px;
     background-color: var(--primary);
     color: var(--general-white);
     margin-left: 4px;
 }
 
 .top_section_shops{
-    width: 1232px;
-    height: 40px;
+    max-width: 100%;
     margin: 120px auto;
     padding-bottom: 120px;
     display: flex;
@@ -207,19 +259,24 @@
 }
 
 .shop {
-    width: 135px;
-    height: 40px;
-    margin: 0 5px;
+    max-width: 135px;
+    max-height: 40px;
 }
+
+.apple {
+   padding-left: 20px;
+}
+
+
+
 /*____________block offer______________*/
 
-.offer_title_container {
+.title_container {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 120px auto 0;
-    width: 310px;
-    height: 50px;
+    position: relative;
+    margin: 120px auto 100px;
+    max-width: 364px;
+    max-height: 50px;
 }
 
 .offer_title_text {
@@ -228,19 +285,34 @@
     font-weight: 500;
     font-style: normal;
     color: var(--primary-text);
-    transition: 1s;
+    position: relative;
+    top: 0;
+    left: 15px;
 }
 
-.offer_title_line {
-    width: 100px;
+.offer_title_text:after {
+    content: '';
+    max-width: 100px;
+    height: 4px;
+    background-color: var(--secondary);
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 40px;
+
+}
+
+/*.offer_title_line {
+    max-width: 100px;
     height: 4px;
     border: none;
     background-color: var(--secondary);
-    margin: 20px auto 80px;
-}
+    margin: 20px auto 80px;*/
+
 
 .offer_content {
     margin: 0 -8px 120px;
+    width: 1264px;
 }
 
 .offer_icon_container {
@@ -255,14 +327,74 @@
 }
 
 .svg_icon {
-    width: 90px;
-    height: 95px;
-    fill: var(--primary)
+    max-width: 90px;
+    max-height: 95px;
+    fill: var(--primary);
 }
 
 .offer_link {
     color: var(--primary-text);
 }
+
+/*______________block homes_______________________*/
+
+.homes {
+    background-color: var(--background);
+    width: 100vw;
+    height: 828px;
+}
+
+.homes_title_text {
+    width: 100%;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--primary-text);
+    margin: 120px auto;
+}
+
+.images_homes {
+    margin: 220px auto;
+}
+
+.hotel_name {
+    display: block;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--primary);
+    margin: 21px 0 0 2px;
+}
+
+.hotel_location {
+    display: block;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--secondary-text);
+    opacity: 0.8;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.arrow_container {
+    width: 1px;
+    height: 1px;
+    position: relative;
+}
+
+.arrow_in_circle {
+    width: 48px;
+    height: 48px;
+    fill: var(--secondary-text);
+    opacity: 0.8;
+    position: relative;
+    bottom: 496px;
+    left: 1211px;
+}
+
+
 
 /*______________block footer_______________________*/
 
@@ -281,7 +413,7 @@
 
 .footer_list {
     margin: 120px 8px 40px;
-    width: 400px;
+    max-width: 400px;
 }
 
 .list_style {
@@ -308,4 +440,233 @@
     font-size: 14px;
     line-height: 16px;
     color: var(--general-white);
+}
+
+/*_____________480px____________*/
+
+@media only screen and (max-width: 480px) {
+    :root {
+        --col-width: calc(100% / 6);
+        --text-small: 12px;
+    }
+
+    .col-sm-1 { width: var(--col-width);}
+    .col-sm-2 { width: calc(var(--col-width) * 2);}
+    .col-sm-3 { width: calc(var(--col-width) * 3);}
+    .col-sm-4 { width: calc(var(--col-width) * 4);}
+    .col-sm-5 { width: calc(var(--col-width) * 5);}
+    .col-sm-6 { width: 100%;}
+
+    .text_small {
+        font-size: var(--text-small);
+    }
+
+    .logo {
+        width: 120px;
+        height: 25px;
+    }
+
+    .top_section_nav {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .nav_links {
+        flex-direction: column;
+        width: max-content;
+    }
+
+    .ts_nav_link_block {
+        display: block;
+    }
+
+    .night_button {
+        width: 16px;
+        height: 16px;
+    }
+
+    .account_circle {
+        width: 24px;
+        height: 24px;
+        margin: 0 16px 0;
+    }
+
+    .ts_main_title_text {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .top_section_form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        justify-items: center;
+        margin: 31px auto 0;
+    }
+
+    .form_input_container {
+        max-width: 100%;
+    }
+
+    .form-input {
+        width: 100%;
+        height: 100%;
+        border: 3px solid var(--secondary);
+    }
+
+    .input_label {
+        position: center ;
+        font-size: var(--text-small);
+        bottom: 0;
+        left: 0;
+        color: var(--primary-text);
+    }
+
+    .destination {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        margin: 0;
+        font-size: var(--text-small);
+    }
+
+    .calendar {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+    }
+
+    .calendar_2 {
+        display: block;
+        visibility: visible;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    .offer_title_container {
+        margin: 40px auto 16px;
+        padding: 0;
+    }
+
+    .offer_content {
+        display: flex;
+        flex-flow: wrap column;
+    }
+
+    .offer_title_line {
+        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .offer_icon_container {
+        margin: 16px auto;
+    }
+}
+
+/*_____________768px____________*/
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --col-width: calc(100% / 6);
+    }
+
+    .col-md-1 {
+        width: var(--col-width);
+    }
+
+    .col-md-2 {
+        width: calc(var(--col-width) * 2);
+    }
+
+    .col-md-3 {
+        width: calc(var(--col-width) * 3);
+    }
+
+    .col-md-4 {
+        width: calc(var(--col-width) * 4);
+    }
+
+    .col-md-5 {
+        width: calc(var(--col-width) * 5);
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .top_section_form {
+        display: table;
+        margin: 32px auto;
+        width: 100%;
+        border-radius: 0;
+        border: 4px solid var(--secondary);
+    }
+
+    .form_input_container {
+        border: 4px solid var(--secondary);
+    }
+
+    .form_input {
+        width: 100%;
+        margin: 0;
+        border-radius: 8px;
+        border: 4px solid var(--secondary);
+    }
+
+    .destination, .calendar {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .input_label {
+        display: none;
+    }
+
+    .top_section_shops {
+        margin: 60px auto 0;
+    }
+
+    .offer_title_container {
+        margin: 40px auto 16px;
+        padding: 0;
+    }
+
+    .offer_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .offer_title_line {
+        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .offer_icon_container {
+        margin: 16px 16px;
+    }
+}
+
+/*_____________1024px____________*/
+@media only screen and (max-width: 1024px) {
+    .form_input_container {
+        position: relative;
+        bottom: 22px;
+        left: 0;
+        width: 440px;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+
 }
