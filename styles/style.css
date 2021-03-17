@@ -57,6 +57,16 @@
     padding: 0 16px;
 }
 
+.title_container {
+    display: flex;
+    position: relative;
+    margin: 0 auto 30px;
+    padding: 120px 0;
+    max-width: 400px;
+    max-height: 50px;
+    justify-content: center;
+}
+
 .row_block{
     display: flex;
     flex-direction: row;
@@ -78,9 +88,11 @@
     line-height: 21px;
 }
 
+/*_________top_section block___________*/
+
 .top_section {
     width: 100vw;
-    height: 902px;
+    max-height: 902px;
     padding-top: 1px;
     background-color: var(--primary-dark);
     background-image: url('../images/background_image.jpg');
@@ -271,14 +283,6 @@
 
 /*____________block offer______________*/
 
-.title_container {
-    display: flex;
-    position: relative;
-    margin: 120px auto 100px;
-    max-width: 364px;
-    max-height: 50px;
-}
-
 .offer_title_text {
     font-size: 40px;
     line-height: 47px;
@@ -286,8 +290,6 @@
     font-style: normal;
     color: var(--primary-text);
     position: relative;
-    top: 0;
-    left: 15px;
 }
 
 .offer_title_text:after {
@@ -298,7 +300,7 @@
     display: block;
     position: relative;
     top: 20px;
-    left: 40px;
+    left: 100px;
 
 }
 
@@ -312,10 +314,10 @@
 
 .offer_content {
     margin: 0 -8px 120px;
-    width: 1264px;
+    max-width: 1264px;
 }
 
-.offer_icon_container {
+.offer_image_col {
     flex-grow: 1;
     width: 100px;
     height: 180px;
@@ -341,7 +343,7 @@
 .homes {
     background-color: var(--background);
     width: 100vw;
-    height: 828px;
+    max-height: 828px;
 }
 
 .homes_title_text {
@@ -351,7 +353,21 @@
     font-weight: 500;
     font-style: normal;
     color: var(--primary-text);
-    margin: 120px auto;
+}
+
+.homes_content{
+    margin: 30px -8px 112px;
+    max-width: 1264px;
+}
+
+.homes_image_col {
+    flex-grow: 1;
+    width: 296px;
+    height: 435px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin: 3px 7px 0;
 }
 
 .images_homes {
@@ -379,8 +395,8 @@
 }
 
 .arrow_container {
-    width: 1px;
-    height: 1px;
+    width: 0;
+    height: 0;
     position: relative;
 }
 
@@ -390,8 +406,8 @@
     fill: var(--secondary-text);
     opacity: 0.8;
     position: relative;
-    bottom: 496px;
-    left: 1211px;
+    bottom: 88px;
+    right: 40px;
 }
 
 
@@ -555,7 +571,7 @@
         padding: 0;
     }
 
-    .offer_content {
+    .offer_content, .homes_content{
         display: flex;
         flex-flow: wrap column;
     }
@@ -567,7 +583,7 @@
         height: 0;
     }
 
-    .offer_icon_container {
+    .offer_image_col, .images_homes {
         margin: 16px auto;
     }
 }
@@ -579,29 +595,12 @@
         --col-width: calc(100% / 6);
     }
 
-    .col-md-1 {
-        width: var(--col-width);
-    }
-
-    .col-md-2 {
-        width: calc(var(--col-width) * 2);
-    }
-
-    .col-md-3 {
-        width: calc(var(--col-width) * 3);
-    }
-
-    .col-md-4 {
-        width: calc(var(--col-width) * 4);
-    }
-
-    .col-md-5 {
-        width: calc(var(--col-width) * 5);
-    }
-
-    .col-md-6 {
-        width: 100%;
-    }
+    .col-md-1 { width: var(--col-width);}
+    .col-md-2 { width: calc(var(--col-width) * 2);}
+    .col-md-3 { width: calc(var(--col-width) * 3);}
+    .col-md-4 { width: calc(var(--col-width) * 4);}
+    .col-md-5 { width: calc(var(--col-width) * 5);}
+    .col-md-6 { width: 100%;}
 
     .top_section_form {
         display: table;
