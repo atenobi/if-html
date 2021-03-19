@@ -343,7 +343,7 @@
 .homes {
     background-color: var(--background);
     width: 100vw;
-    max-height: 828px;
+    height: 828px;
 }
 
 .homes_title_text {
@@ -409,8 +409,6 @@
     bottom: 88px;
     right: 40px;
 }
-
-
 
 /*______________block footer_______________________*/
 
