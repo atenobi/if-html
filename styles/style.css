@@ -350,7 +350,7 @@
 .section_homes {
     background-color: var(--background);
     width: 100vw;
-    height: 828px;
+    min-height: 828px;
 }
 
 .section_homes__title--text {
@@ -454,7 +454,7 @@
 
 .sing_in_section {
     max-width: 1232px;
-    height: 200px;
+    min-height: 200px;
     background-color: var(--background);
     margin: 0 auto 0;
 }
@@ -577,149 +577,92 @@
 /*_______________480px________________________*/
 @media only screen and (max-width: 480px) {
     .container {
-        width: 360px;
-        height: 641px;
-        margin: 0 auto;
-        padding: 0;
+        width: 100vw;
+        min-height: 100%;
+        margin: 12px auto;
+        padding: 17px;
     }
 
-    .top-section {
-        margin: 0 auto;
-        padding-top: 40px;
-    }
-
-    .header__logo {
-        margin-right: 110px;
-        width: 121px;
-        height: 24px;
-    }
-
-    .logo {
-        width: 121px;
-        height: 24px;
-        fill: var(--primary);
-    }
-
-    .header__nav {
-        width: 60px;
-        height: 40px;
+    .row {
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        flex-flow: row-reverse wrap;
     }
 
-    .header__nav__link {
-        font-size: 16px;
-        line-height: 16px;
-        text-decoration: none;
-        color: var(--general-white);
-        margin: 0;
-    }
-
-    .header__nav_svg {
+    .top_section__header {
         width: 100%;
-        height: 100%;
+        display: flex;
+        flex-direction: row;
     }
 
-    .header__nav__theme {
-        width: 16px;
-        height: 16px;
-        fill: var(--general-white);
+    .top_section__logo--container {
+        padding: 0;
         margin: 0;
+        min-width: 121px;
+        min-height: 24px;
     }
 
-    .header__nav__profile {
-        width: 24px;
-        height: 24px;
-        fill: var(--general-white);
+    .top_section--logo {
+        width: 121px;
+        height: auto;
     }
 
-    .top-section__content {
-        max-width: 100%;
-        margin-top: 40px;
+    .top_section__nav--container {
+        width: 115px;
+        height: 16px;
+        flex-direction: column;
     }
 
-    .top-section__title {
-        width: 328px;
-        height: 70px;
-        font-weight: 500;
+    .top_section__nav, .top_section__settings {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top_section__nav {
+        flex-direction: row-reverse;
+    }
+
+    .top_section__nav--container {
+        font-size: 4px;
+    }
+
+    .top_section__title {
+        margin: 50px auto;
+    }
+
+    .top_section__title--text {
         font-size: 30px;
         line-height: 35px;
-        color: var(--general-white);
     }
 
-    .ts__form__title {
-        position: absolute;
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    }
-
-    .top-section__form {
-        max-width: 328px;
+    .top_section__form {
+        width: 328px;
         height: 232px;
-        display: flex;
-        justify-content: center;
-        flex-flow: column wrap;
-        margin-top: 25px;
-        background-color: var(--general-white);
-        border: 3px solid var(--secondary);
-        border-radius: 8px;
-        box-sizing: border-box;
+        flex-flow: column nowrap;
+        border: 4px solid var(--secondary);
     }
 
-    .placeholder_label {
-        position: absolute;
-        visibility: hidden;
+    .input_label {
+        display: none;
         width: 0;
         height: 0;
     }
 
-    .destination {
-        width: 312px;
-        height: 48px;
-        font-size: 15px;
-        border-style: none;
+    .form_input--sm {
         margin: 0;
-    }
-
-    .top-section__date {
-        width: 312px;
+        width: 100%;
         height: 48px;
-        border-radius: 8px;
-        font-size: 15px;
-        margin: 0;
     }
 
-    .top-section__plaсes {
-        width: 312px;
-        height: 48px;
-        border-style: none;
+    .top_section__form_input--calendar {
+        width: 100%;
+        margin-left: 35px;
     }
 
-    .top-section__button {
-        width: 312px;
-        height: 48px;
-        border-radius: 8px;
-        border: none;
-        background-color: var(--primary);
-        color: var(--general-white);
-        font-size: 19px;
-    }
 
-    .top-section__store {
-        max-width: 1232px;
-        margin-top: 40px;
-        padding-bottom: 40px;
-        display: flex;
-        justify-content: space-evenly;
-    }
 
-    .top-section__shop {
-        width: 135px;
-        height: 40px;
-        padding: 0 8px 0;
-    }
+
 
     /*offer*/
     .offer {
@@ -739,13 +682,6 @@
         font-size: 28px;
         line-height: 33px;
         color: var(--primary-text);
-    }
-
-    .offer_underline {
-        position: absolute;
-        visibility: hidden;
-        width: 0;
-        height: 0;
     }
 
     .feedback__container {
@@ -776,10 +712,67 @@
     .icon_name {
         font-size: 15px;
     }
+
+    /*homes*/
+    .section_homes {
+
+    }
+
+    .section_homes__button--arrow, .sing_in_section--cross_svg,
+    .section_destinations__button--arrow {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    /*destinations*/
+    .section_destinations__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /*sing in*/
+    .sing_in_section {
+        display: flex;
+        justify-content: start;
+    }
+
+    .sing_in_section--cross_svg {
+        position: absolute;
+        left: 165px;
+        top: 50px;
+    }
+
+    .sing_in_section__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sing_in_section__content--user {
+        margin: 10px;
+    }
+
+    .sing_in_section__content--form {
+        margin: 0;
+    }
+
+    .sing_in_section__form--button {
+        margin: 10px;
+    }
+
+    .text_size_lg {
+        font-size: 20px;
+        line-height: 18px;
+    }
+
     /*footer*/
     .footer {
-        width: 360px;
-        height: 203px;
+        width: 100%;
+        max-height: 203px;
         margin: 40px auto;
     }
 
@@ -788,20 +781,6 @@
         height: 203px;
     }
 
-    .footer__logo {
-        width: 98px;
-        height: 20px;
-        fill: var(--general-white);
-        visibility: visible;
-    }
-
-    .footer__body {
-        width: 225px;
-        height: 20px;
-        margin: 35px auto 0;
-        display: flex;
-        justify-content: space-between;
-    }
 
     .footer__list__container {
         margin: 0;
