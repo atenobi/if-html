@@ -324,20 +324,11 @@
     max-height: 40px;
 }
 
-
 .top_section__shops--apple {
-   padding-left: 20px;
+    padding-left: 20px;
+}
 
 /*____________block offer______________*/
-
-
-/*.offer_title_line {
-    max-width: 100px;
-    height: 4px;
-    border: none;
-    background-color: var(--secondary);
-    margin: 20px auto 80px;*/
-
 
 .offer__content {
     margin: 0 -8px 120px;
@@ -354,7 +345,7 @@
     color: var(--primary-text);
 }
 
-/*______________block homes_______________________*/
+/*______________block homes__________*/
 
 .section_homes {
     background-color: var(--background);
@@ -459,7 +450,7 @@
     transform: scale(1.1) rotate(90deg);
 }
 
-/*______________sing in____________________________*/
+/*______________sing in__________________*/
 
 .sing_in_section {
     max-width: 1232px;
@@ -531,36 +522,21 @@
 
 
 .sing_in_section__form--button:hover {
-
-.footer{
-    max-height: 100%;
-
     background-color: var(--primary-dark);
     color: var(--general-white);
 }
+
 /*______________block footer_______________________*/
 
 .footer {
     background-color: var(--primary-dark);
     width: 100%;
-    height: 630px;
+    min-height: 630px;
 }
-
 
 .footer__content {
-
-.footer__logo {
-    position: absolute;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-
-.footer__list__container {
-    width: 31%;
-
+    max-width: 1080px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin: 0 -8px 0;
 }
@@ -574,7 +550,7 @@
     list-style-type: none;
 }
 
-.list_head_text {
+.footer--list_head {
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
@@ -582,13 +558,13 @@
     margin-bottom: 25px;
 }
 
-
 .list_text {
     font-size: 20px;
     line-height: 23px;
     font-weight: 400;
     color: var(--general-white);
     margin-bottom: 25px;
+}
 
 
 .footer__copyright_text {
@@ -598,7 +574,7 @@
 }
 
 
-/*adapt for gadgets_______________480px________________________*/
+/*_______________480px________________________*/
 @media only screen and (max-width: 480px) {
     .container {
         width: 360px;
@@ -810,14 +786,6 @@
     .footer__body {
         width: 360px;
         height: 203px;
-    }
-
-    .footer_logo_container {
-        width: 100px;
-        height: 20px;
-        margin: 0 auto 0;
-        padding-top: 40px;
-        box-sizing: content-box;
     }
 
     .footer__logo {
