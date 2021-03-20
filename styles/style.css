@@ -50,6 +50,7 @@
     margin: 0 auto;
 }
 
+
 .container {
     max-width: 1264px;
     height: 100%;
@@ -323,11 +324,9 @@
     max-height: 40px;
 }
 
+
 .top_section__shops--apple {
    padding-left: 20px;
-}
-
-
 
 /*____________block offer______________*/
 
@@ -530,7 +529,12 @@
     transition: 500ms;
 }
 
+
 .sing_in_section__form--button:hover {
+
+.footer{
+    max-height: 100%;
+
     background-color: var(--primary-dark);
     color: var(--general-white);
 }
@@ -542,7 +546,19 @@
     height: 630px;
 }
 
+
 .footer__content {
+
+.footer__logo {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.footer__list__container {
+    width: 31%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -566,16 +582,291 @@
     margin-bottom: 25px;
 }
 
+
 .list_text {
     font-size: 20px;
     line-height: 23px;
     font-weight: 400;
     color: var(--general-white);
     margin-bottom: 25px;
-}
+
 
 .footer__copyright_text {
     font-size: 14px;
     line-height: 16px;
     color: var(--general-white);
 }
+
+
+/*adapt for gadgets_______________480px________________________*/
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 360px;
+        height: 641px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .top-section {
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    .header__logo {
+        margin-right: 110px;
+        width: 121px;
+        height: 24px;
+    }
+
+    .logo {
+        width: 121px;
+        height: 24px;
+        fill: var(--primary);
+    }
+
+    .header__nav {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        flex-flow: row-reverse wrap;
+    }
+
+    .header__nav__link {
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        color: var(--general-white);
+        margin: 0;
+    }
+
+    .header__nav_svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header__nav__theme {
+        width: 16px;
+        height: 16px;
+        fill: var(--general-white);
+        margin: 0;
+    }
+
+    .header__nav__profile {
+        width: 24px;
+        height: 24px;
+        fill: var(--general-white);
+    }
+
+    .top-section__content {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .top-section__title {
+        width: 328px;
+        height: 70px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+        color: var(--general-white);
+    }
+
+    .ts__form__title {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .top-section__form {
+        max-width: 328px;
+        height: 232px;
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        margin-top: 25px;
+        background-color: var(--general-white);
+        border: 3px solid var(--secondary);
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .placeholder_label {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .destination {
+        width: 312px;
+        height: 48px;
+        font-size: 15px;
+        border-style: none;
+        margin: 0;
+    }
+
+    .top-section__date {
+        width: 312px;
+        height: 48px;
+        border-radius: 8px;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .top-section__plaсes {
+        width: 312px;
+        height: 48px;
+        border-style: none;
+    }
+
+    .top-section__button {
+        width: 312px;
+        height: 48px;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--primary);
+        color: var(--general-white);
+        font-size: 19px;
+    }
+
+    .top-section__store {
+        max-width: 1232px;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .top-section__shop {
+        width: 135px;
+        height: 40px;
+        padding: 0 8px 0;
+    }
+
+    /*offer*/
+    .offer {
+        margin: 40px auto;
+        width: 100%;
+        height: 100%;
+    }
+    .offer_title {
+        margin: 40px auto 0;
+        padding-top: 25px;
+        width: 214px;
+        height: 33px;
+    }
+
+    .offer_title_text {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        color: var(--primary-text);
+    }
+
+    .offer_underline {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .feedback__container {
+        width: 214px;
+        height: 540px;
+        margin: 60px auto 0;
+    }
+
+    .icon_feedback {
+        margin: 0;
+    }
+
+    .icon__svg_container {
+        width: 214px;
+        height: 104px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column wrap;
+        margin: 0;
+    }
+
+    .icon__svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .icon_name {
+        font-size: 15px;
+    }
+    /*footer*/
+    .footer {
+        width: 360px;
+        height: 203px;
+        margin: 40px auto;
+    }
+
+    .footer__body {
+        width: 360px;
+        height: 203px;
+    }
+
+    .footer_logo_container {
+        width: 100px;
+        height: 20px;
+        margin: 0 auto 0;
+        padding-top: 40px;
+        box-sizing: content-box;
+    }
+
+    .footer__logo {
+        width: 98px;
+        height: 20px;
+        fill: var(--general-white);
+        visibility: visible;
+    }
+
+    .footer__body {
+        width: 225px;
+        height: 20px;
+        margin: 35px auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__list__container {
+        margin: 0;
+        padding: 0;
+        width: max-content;
+
+    }
+
+    .list__heading .footer_link{
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0;
+        color: var(--general-white);
+    }
+
+    .footer_link_list {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .copyright_holder {
+        margin: 35px auto 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .copyright_holder__text {
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--general-white);
+    }
+}
+
+
