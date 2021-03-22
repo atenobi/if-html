@@ -83,7 +83,7 @@
 
 .col {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -254,51 +254,50 @@
     outline: none;
 }
 
+.top_section__form--input_container {
+    position: relative;
+}
 
 .top_section__form_input--destination {
-    position: relative;
-    bottom: 22px;
-    left: 0;
-    width: 440px;
+    width: 420px;
     margin-left: 30px;
 }
 
 .input_destination--label {
-    position: relative;
-    display: block;
-    bottom: 47px;
-    left: 27px;
+    position: absolute;
+    bottom: 140%;
+    left: 5%;
     color: var(--general-white);
 }
 
-.top_section__form_input--calendar {
-    position: relative;
-    bottom: 22px;
-    right: 36px;
+.form_calendar__container {
     width: 259px;
     border: 3px solid var(--secondary);
+    border-radius: 8px;
+}
+
+.top_section__form_input--calendar {
+    width: 129px;
+    height: 55px;
 }
 
 .input_calendar--label {
-    position: relative;
-    display: block;
-    bottom: 47px;
-    right: 13px;
+    position: absolute;
+    bottom: 148%;
+    left: 8%;
     color: var(--general-white);
 }
 
 .top_section__form_input--calendar_2 {
-    display: none;
-    visibility: hidden;
-    width: 0;
-    height: 0;
+    width: 129px;
+    height: 55px;
 }
 
 .input_label--calendar_2 {
-    display: none;
-    visibility: hidden;
-    width: 0;
-    height: 0;
+    position: absolute;
+    bottom: 148%;
+    left: 37%;
+    color: var(--general-white);
 }
 
 .top_section__form_input--booking_places {
@@ -332,14 +331,18 @@
 /*____________block offer______________*/
 
 .offer__content {
-    margin: 0 -8px 120px;
+    margin: 0 -8px 109px;
     max-width: 1264px;
+    height: 193px;
+    display: flex;
+    align-items: baseline;
 }
 
 .offer__content--svg_icon {
     max-width: 90px;
     max-height: 95px;
     fill: var(--primary);
+    margin-bottom: 56px;
 }
 
 .offer__content--link {
@@ -465,7 +468,7 @@
     max-width: 1232px;
     min-height: 200px;
     background-color: var(--background);
-    margin: 0 auto 0;
+    margin: 0 auto -4px;
     position: relative;
 }
 
@@ -492,7 +495,7 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    margin: 46px 0;
+    padding-top: 46px;
 }
 
 .sing_in_section__content--user {
@@ -540,7 +543,7 @@
     display: flex;
     flex-direction: row;
     align-items: start;
-    margin: 0 0 100px -8px;
+    margin: -9px 0 100px -8px;
 }
 
 .col_for_3 {
@@ -630,7 +633,7 @@
 }
 
 .footer__content {
-    max-width: 1080px;
+    max-width: 1130px;
     display: flex;
     justify-content: space-between;
     margin: 0 -8px 0;

@@ -89,25 +89,23 @@
                         <input  class="top_section__form_input--destination form_input form_input--sm text_sm" placeholder="New York" id="destination">
                     </div>
 
-                    <div>
-                        <label class="input_calendar--label input_label text_sm" for="calendar1">Check-in — Check-out</label>
+                    <div class="top_section__form--input_container form_calendar__container row">
+                        <label class="input_calendar--label input_label text_sm" for="calendar1">Check-in — </label>
                         <input class="top_section__form_input--calendar form_input form_input--sm text_sm" id="calendar1" type="date" min="01.01.2020" max="01.01.2030" value="01.01.2021">
-                        <label class="input_label--calendar_2 input_label text_sm" for="calendar2">Check-in — Check-out</label>
+                        <label class="input_label--calendar_2 input_label text_sm" for="calendar2"> — Check-out</label>
                         <input class="top_section__form_input--calendar_2 form_input form_input--sm text_sm" id="calendar2" type="date" min="01.01.2020" max="01.01.2030" value="01.01.2021">
 
                     </div>
 
-                    <div>
-                        <input class="top_section__form_input--booking_places form_input form_input--sm text_sm" id="places_" list="places">
-                        <label for="places_"></label>
-                        <datalist id="places">
-                            <option value="1 Adults — 0 Children — 1 Room"></option>
-                            <option value="2 Adults — 0 Children — 1 Room"></option>
-                            <option value="2 Adults — 1 Children — 1 Room"></option>
-                            <option value="2 Adults — 1 Children — 2 Room"></option>
-                            <option value="2 Adults — 2 Children — 2 Room"></option>
-                            <option value="3 Adults — 2 Children — 3 Room"></option>
-                        </datalist>
+                    <div class="top_section__form--input_container">
+                        <select class="top_section__form_input--booking_places form_input form_input--sm text_sm" name="places" id="places">
+                            <option selected value="1 Adults — 0 Children — 1 Room">1 Adults — 0 Children — 1 Room</option>
+                            <option value="2 Adults — 0 Children — 1 Room">2 Adults — 0 Children — 1 Room</option>
+                            <option value="2 Adults — 1 Children — 1 Room">2 Adults — 1 Children — 1 Room</option>
+                            <option value="2 Adults — 1 Children — 2 Room">Adults — 1 Children — 2 Room</option>
+                            <option value="2 Adults — 2 Children — 2 Room">2 Adults — 2 Children — 2 Room</option>
+                            <option value="3 Adults — 2 Children — 3 Room">3 Adults — 2 Children — 3 Room</option>
+                       </select>
                     </div>
 
                     <div>
