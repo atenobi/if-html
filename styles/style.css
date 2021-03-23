@@ -143,7 +143,7 @@
     margin-top: 26px;
 }
 
-/*_________top_section block___________*/
+/*top_section*/
 
 .top_section {
     width: 100vw;
@@ -208,6 +208,10 @@
     position: relative;
     top: 12px;
     left: 4px;
+}
+
+.top_section--menu_mobile {
+     display: none;
 }
 
 .top_section__settings--night_button {
@@ -328,7 +332,7 @@
     padding-left: 20px;
 }
 
-/*____________block offer______________*/
+/*block offer*/
 
 .offer__content {
     margin: 0 -8px 109px;
@@ -349,12 +353,12 @@
     color: var(--primary-text);
 }
 
-/*______________block homes__________*/
+/*block homes*/
 
 .section_homes {
     background-color: var(--background);
     width: 100vw;
-    min-height: 828px;
+    max-height: 828px;
 }
 
 .section_homes__title--text {
@@ -395,7 +399,7 @@
     transform: scale(1.1);
 }
 
-/*______________block destinations_________________*/
+/*block destinations*/
 
 .section_destinations__form {
     width: 620px;
@@ -462,7 +466,7 @@
     left: 6%;
 }
 
-/*______________sing in__________________*/
+/*sing in*/
 
 .sing_in_section {
     max-width: 1232px;
@@ -537,7 +541,7 @@
     background-color: var(--primary-dark);
     color: var(--general-white);
 }
-/*______________guest reviews______________________*/
+/*guest reviews*/
 
 .guests_reviews__content {
     display: flex;
@@ -624,7 +628,7 @@
 }
 
 
-/*______________block footer_______________________*/
+/*block footer*/
 
 .footer {
     background-color: var(--primary-dark);
@@ -667,8 +671,8 @@
     color: var(--general-white);
 }
 
-
-/*_______________480px________________________*/
+/*__768px__*/
+/*__480px__*/
 @media only screen and (max-width: 480px) {
    :root {
        --col-lg-width: calc(100% / 6);
@@ -683,17 +687,30 @@
 
     .block_body {
         width: 100vw;
-
     }
 
-    .row {
+    .container {
+        width: 100%;
+        max-height:  641px;
+    }
+
+    .display_none {
+        display: none;
+    }
+
+    .col_sm {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
     }
 
-    .text_sm_lg {
+    .title_container {
+        margin: 0;
+        padding: 40px 0 60px;
+    }
+
+    .text_sm_md {
         font-size: 15px;
         line-height: 18px;
     }
@@ -703,7 +720,7 @@
         line-height: 14px;
     }
 
-    .title--text {
+    .title--text_sm {
        font-size: 28px;
        line-height: 32px;
     }
@@ -715,8 +732,6 @@
     }
 
     .top_section__logo--container {
-
-
         min-width: 121px;
         min-height: 24px;
     }
@@ -739,31 +754,59 @@
     }
 
      .top_section__settings {
-        display: flex;
-        flex-direction: row;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
     }
 
-    .top_section__nav {
-        flex-direction: row-reverse;
+    .top_section__settings--night_button {
+        width: 16px;
+        height: 16px;
+        margin: 0;
     }
 
-    .top_section__nav--container {
-        font-size: 4px;
-    }
+     .top_section__settings--account_circle {
+         width: 24px;
+         height: 24px;
+         margin: 0 16px;
+     }
 
-    .top_section__title {
+     .top_section--menu_mobile {
+         display: block;
+         width: 24px;
+         height: 16px;
+         fill: var(--general-white);
+     }
 
-    }
+     .top_section__title {
+         max-width: 328px;
+         max-height: 70px;
+         margin: 50px auto 31px;
+     }
 
     .top_section__title--text {
         font-size: 30px;
         line-height: 35px;
+        font-weight: 500;
     }
 
     .top_section__form {
+        margin: 0 auto 40px;
         width: 328px;
         height: 232px;
         flex-flow: column nowrap;
+        background-color: var(--secondary);
+        border: 4px solid var(--secondary);
+    }
+
+    .top_section__form--input_container {
+        width: 100%;
+    }
+
+    .form_input--sm {
+        width: 100%;
+        height: 48px;
+        margin: 0;
         border: 4px solid var(--secondary);
     }
 
@@ -773,72 +816,53 @@
         height: 0;
     }
 
-    .form_input--sm {
-
-        width: 100%;
-        height: 48px;
+    .top_section__shops {
+        margin: 0 auto;
+        padding-bottom: 40px;
     }
-
-    .top_section__form_input--calendar {
-        width: 100%;
-
-    }
-
-
-
-
 
     /*offer*/
-    .offer {
 
-    }
     .offer_title {
-
-        padding-top: 25px;
         width: 214px;
         height: 33px;
     }
 
-    .offer_title_text {
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 33px;
-        color: var(--primary-text);
+    .offer__content {
+        height: 500px;
     }
 
-    .feedback__container {
-        width: 214px;
-        height: 540px;
-
+    .offer__content--svg_icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
     }
 
-    .icon_feedback {
-
-    }
-
-    .icon__svg_container {
+    .offer__svg_container {
         width: 214px;
         height: 104px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-flow: column wrap;
-
     }
 
-    .icon__svg {
-        width: 70px;
-        height: 70px;
-    }
-
-    .icon_name {
-        font-size: 15px;
-    }
 
     /*homes*/
+
+    .section_homes {
+        height: 390px;
+    }
+
     .photo_hotel, .photo_resort {
         width: 150px;
         height: 150px;
+    }
+
+    .section_homes__button--arrow {
+        width: 28px;
+        height: 28px;
+        fill: var(--secondary-text);
+        opacity: 0.8;
+        position: absolute;
+        top: 25%;
+        right: 3%;
     }
 
     /*destinations*/
@@ -852,44 +876,28 @@
         width: 33%;
     }
 
+    .section_destinations__content {
+        margin-bottom: 40px;
+    }
 
     /*sing in*/
-    .sing_in_section {
-        display: flex;
-        justify-content: start;
+    /*guest reviews*/
+
+    .guests_reviews {
+       height: 660px;
+        margin-bottom: 40px;
     }
 
-    .sing_in_section--cross_svg {
-        position: absolute;
-        left: 165px;
-        top: 50px;
+    .guest--photo_resort {
+        width: 327px;
+        height: 325px;
     }
 
-    .sing_in_section__content {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
+    .guests_reviews--text {
+        margin: 0;
     }
-
-    .sing_in_section__content--user {
-
-    }
-
-    .sing_in_section__content--form {
-
-    }
-
-    .sing_in_section__form--button {
-
-    }
-
-    .text_size_lg {
-        font-size: 20px;
-        line-height: 18px;
-    }
-
     /*footer*/
+
     .footer {
         width: 100%;
         max-height: 203px;
