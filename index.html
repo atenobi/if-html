@@ -91,8 +91,9 @@
                 <div class="top_section__form col-sm-6">
 
                     <div class="top_section__form--input_container">
-                        <label class="input_destination--label input_label text_sm text_md_480" for="destination">Your destination or hotel name</label>
                         <input  class="top_section__form_input--destination form_input form_input--sm text_sm text_md_480" placeholder="New York" id="destination">
+                        <label class="input_destination--label input_label text_sm text_md_480" for="destination">Your destination or hotel name</label>
+
                     </div>
 
                     <div class="top_section__form--input_container form_calendar__container row">
@@ -198,34 +199,44 @@
     
     <section class="section_destinations">
         <div class="container">
-          <div class="title_container">
-              <h5 class="title--text title--text_sm">The best destinations</h5>
-          </div>
-            <form class="section_destinations__form col-sm-6">
-              <input type="button" class="section_destinations__form--button text_lg text_sm_lg text_lg_480" value="Regions"/>
-              <input type="button" class="section_destinations__form--button text_lg text_sm_lg text_lg_480" value="Cities"/>
-              <input type="button" class="section_destinations__form--button text_lg text_sm_lg text_lg_480" value="Places of interest"/>
-            </form>
-          <div class="section_destinations__content row section_md__content">
-             <div class="col_for_4_item col-lg-3">
-                 <img class="photo_resort photo_md" src="./images/photo/maldives.jpg" alt="maldives">
-                 <span class="photo_name text_lg text_sm_480">Maldives</span>
-             </div>
-             <div class="col_for_4_item col-lg-3">
-                 <img class="photo_resort photo_md" src="./images/photo/spain.jpg" alt="spain">
-                 <span class="photo_name text_lg text_sm_480">Spain</span>
-             </div>
-             <div class="col_for_4_item col-lg-3 display_none">
-                 <img class="photo_resort photo_md" src="./images/photo/norway.jpg" alt="norway">
-                 <span class="photo_name text_lg text_sm_480">Norway</span>
-             </div>
-             <div class="col_for_4_item col-lg-3 display_none">
-                 <img class="photo_resort photo_md" src="./images/photo/island.jpg" alt="island">
-                 <span class="photo_name text_lg text_sm_480">Island</span>
-             </div>
-              <svg class="section_destinations__button--arrow display_none display_none_lg"><use href="#arrow_in_circle"></use></svg>
-              <svg class="button_book_now text_sm display_none"><use href="#button_book_now"></use></svg>
-          </div>
+              <div class="title_container">
+                  <h5 class="title--text title--text_sm">The best destinations</h5>
+              </div>
+               <div>
+                <form class="section_destinations__form col-sm-6">
+                  <input type="button" class="section_destinations__form--button text_lg text_sm_lg text_lg_480" value="Regions"/>
+                  <input type="button" class="section_destinations__form--button text_lg text_sm_lg text_lg_480" value="Cities"/>
+                  <input type="button" class="section_destinations__form--button text_lg text_sm_lg text_lg_480" value="Places of interest"/>
+                </form>
+               </div>
+              <div class="section_destinations__content row section_md__content">
+                 <div class="section_destinations__photo--container col_for_4_item col-lg-3">
+                     <img class="photo_resort photo_md" src="./images/photo/maldives.jpg" alt="maldives">
+                     <span class="photo_name text_lg text_sm_480">Maldives</span>
+                     <svg class="button_book_now text_sm display_none"><use href="#button_book_now"></use></svg>
+
+                 </div>
+
+                 <div class="section_destinations__photo--container col_for_4_item col-lg-3">
+                     <img class="photo_resort photo_md" src="./images/photo/spain.jpg" alt="spain">
+                     <span class="photo_name text_lg text_sm_480">Spain</span>
+                     <svg class="button_book_now text_sm display_none"><use href="#button_book_now"></use></svg>
+                 </div>
+
+                 <div class="section_destinations__photo--container col_for_4_item col-lg-3 display_none">
+                     <img class="photo_resort photo_md" src="./images/photo/norway.jpg" alt="norway">
+                     <span class="photo_name text_lg text_sm_480">Norway</span>
+                     <svg class="button_book_now text_sm display_none"><use href="#button_book_now"></use></svg>
+                 </div>
+
+                 <div class="section_destinations__photo--container col_for_4_item col-lg-3 display_none">
+                     <img class="photo_resort photo_md" src="./images/photo/island.jpg" alt="island">
+                     <span class="photo_name text_lg text_sm_480">Island</span>
+                     <svg class="button_book_now text_sm display_none"><use href="#button_book_now"></use></svg>
+                 </div>
+                  <svg class="section_destinations__button--arrow display_none display_none_lg"><use href="#arrow_in_circle"></use></svg>
+              </div>
+            </div>
         </div>
     </section>
     
