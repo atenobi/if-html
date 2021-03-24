@@ -95,7 +95,7 @@
 .col_for_4_item {
     flex-grow: 1;
     max-width: 400px;
-    max-height: 435px;
+    max-height: 480px;
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -264,10 +264,11 @@
 
 .top_section__form--input_container {
     position: relative;
+    max-width: 420px;
 }
 
 .top_section__form_input--destination {
-    width: 420px;
+    width: 100%;
     margin-left: 30px;
 }
 
@@ -320,7 +321,7 @@
 }
 
 .top_section__shops{
-    max-width: 100%;
+    width: 100%;
     margin: 120px auto;
     padding-bottom: 120px;
     display: flex;
@@ -406,7 +407,7 @@
 /*block destinations*/
 
 .section_destinations__form {
-    width: 620px;
+    max-width: 620px;
     height: 60px;
     display: flex;
     margin-bottom: 60px;
@@ -676,8 +677,142 @@
     color: var(--general-white);
 }
 
+/*__1024px__*/
+
+/*@media only screen and (max-width: 1024px) {
+
+    .section_md__content {
+        margin: 0 -8px 50px;
+        padding: 30px 0;
+        max-height: 950px;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .photo_md {
+        width: 285px;
+        height: auto;
+    }
+
+    .top_section__form_input--destination {
+        width: 235px;
+        margin-left: 25px;
+    }
+
+    .display_none_lg {
+        display: none;
+    }
+
+    .section_homes {
+        max-height: 1200px;
+    }
+
+    .button_book_now {
+        top: 21%;
+        left: 8%;
+    }
+
+    .guests_reviews--cost {
+        width: 285px;
+    }
+
+}*/
+
 /*__768px__*/
+
+@media only screen and (max-width: 768px) {
+
+    :root {
+        --col-lg-width: calc(100% / 6);
+    }
+
+    .col-md-1 { width: var(--col-lg-width);}
+    .col-md-2 { width: calc(var(--col-lg-width) * 2);}
+    .col-md-3 { width: calc(var(--col-lg-width) * 3);}
+    .col-md-4 { width: calc(var(--col-lg-width) * 4);}
+    .col-md-5 { width: calc(var(--col-lg-width) * 5);}
+    .col-md-6 { width: 100%;}
+
+    .block_body {
+        max-height: 1200px;
+    }
+
+    .section_md__content {
+        margin: 0 -8px 30px;
+        max-height: 950px;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+
+    .photo_md {
+        width: 362px;
+        height: auto;
+    }
+
+    .display_none_md {
+        display: none;
+    }
+
+    /*top section*/
+
+    .top_section__form {
+        margin: 100px auto 40px;
+        width: 700px;
+        height: 250px;
+        flex-flow: column nowrap;
+        border-radius: 8px;
+        background-color: var(--secondary);
+    }
+
+    .top_section__form--input_container {
+        width: 100%;
+        border: 4px solid var(--secondary);
+        border-radius: 8px;
+    }
+
+    .form_input {
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .input_label {
+        display: none;
+    }
+
+    .top_section__shops {
+        margin: 50px auto;
+    }
+
+    /*homes*/
+
+    .section_homes__button--arrow {
+        top: 40%;
+    }
+
+    /*destination*/
+    .button_book_now {
+        width: 150px;
+        height: 60px;
+        fill: var(--primary);
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+
+    .section_destinations__button--arrow {
+        top: 95%;
+        left: 42%;
+    }
+
+}
+
 /*__480px__*/
+
 @media only screen and (max-width: 480px) {
    :root {
        --col-lg-width: calc(100% / 6);
