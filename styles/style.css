@@ -149,7 +149,7 @@ html {
     display: block;
     text-decoration: none;
     color: var(--primary);
-    margin-top: 26px;
+    margin-top: 25px;
 }
 
 /*top_section*/
@@ -376,6 +376,7 @@ html {
     max-width: 1264px;
     align-items: start;
     position: relative;
+    height: 555px;
 }
 
 .section_homes__content--hotel_location {
@@ -393,7 +394,7 @@ html {
     fill: var(--secondary-text);
     opacity: 0.8;
     position: absolute;
-    top: 32%;
+    top: 23%;
     right: 0;
 }
 
@@ -408,7 +409,7 @@ html {
     max-width: 620px;
     height: 60px;
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .section_destinations__form--button {
@@ -463,6 +464,7 @@ html {
 
 .section_destinations__photo--container {
     position: relative;
+    height: 346px;
 }
 
 .section_destinations__photo--container  .button_book_now {
@@ -871,7 +873,7 @@ html {
     }
 
     .title_container {
-        margin: 0;
+        margin: 0 auto 40px;
         padding: 40px 0 60px;
     }
 
@@ -992,17 +994,29 @@ html {
         position: absolute;
         top: 31%;
         left: 13%;
+        transition: transform 500ms;
     }
 
     .top_section__form_input--destination:focus + .input_destination--label {
         top: 15%;
         left: 5%;
-        transform: translateX(-50px) translateY(-5px) scale(.6);
+        transform: translateX(-30px) translateY(-5px) scale(.6);
     }
 
-    .input_destination--label:not(:placeholder-shown) {
-
+    .top_section__form--magnifying_glass {
+        position: absolute;
+        display: block;
+        top: 16%;
+        right: 102%;
+        width: 16px;
+        height: 16px;
+        fill: var(--secondary-text);
     }
+
+
+   /* .input_destination--label:not(:placeholder-shown) {
+
+    }*/
 
 
     .top_section__shops {
@@ -1031,7 +1045,6 @@ html {
         width: 214px;
         height: 104px;
     }
-
 
     /*homes*/
 
@@ -1066,18 +1079,21 @@ html {
     }
 
     .section_destinations__content {
-        margin-bottom: 40px;
+        margin: 0 10px 0;
+        height: 250px;
     }
 
     /*sing in*/
     /*guest reviews*/
 
-    .guests_reviews--info {
-        height: 300px;
-    }
 
     .guests_reviews {
         margin-bottom: 40px;
+        background-color: var(--background);
+    }
+
+    .guests_reviews--info {
+        height: 300px;
     }
 
     .guest--photo_resort {
