@@ -2,3 +2,191 @@
 @import './global';
 
 @import './pages/index';
+
+/*offer*/
+
+.offer__content {
+  margin: 0 -8px 109px;
+  max-width: 1264px;
+  height: 193px;
+  display: flex;
+  align-items: baseline;
+}
+
+.offer__content--svg_icon {
+  max-width: 90px;
+  max-height: 95px;
+  fill: $primary;
+  margin-bottom: 56px;
+}
+
+.offer__content--link {
+  color: $primary-text;
+}
+
+/*section homes*/
+
+.section_homes {
+  background-color: $background;
+  width: 100vw;
+  max-height: 828px;
+}
+
+.section_homes__content {
+  margin: 30px -20px 0 0;
+  max-width: 1264px;
+  align-items: start;
+  position: relative;
+  height: 555px;
+}
+
+.section_homes__content--hotel_location {
+  display: block;
+  color: $secondary-text;
+  opacity: 0.8;
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.section_homes__button--arrow {
+  width: 48px;
+  height: 48px;
+  fill: $secondary-text;
+  opacity: .8;
+  position: absolute;
+  top: 23%;
+  right: 0;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+}
+
+/*section destination*/
+
+
+.section_destinations__form {
+  max-width: 620px;
+  height: 60px;
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.section_destinations__form--button {
+  width: inherit;
+  height: 60px;
+  flex-grow: 1;
+  background-color: $stroke;
+  color: $primary-text;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 500ms;
+  padding-right: 25px;
+
+  &:hover {
+    background-color: $primary;
+    color: $general-white;
+  }
+
+  &:focus {
+    background-color: $primary;
+    color: $general-white;
+  }
+}
+
+.section_destinations__content {
+  margin: 0 -16px 220px 0;
+  position: relative;
+}
+
+.section_destinations__button--arrow {
+  transform: rotate(90deg);
+  width: 48px;
+  height: 48px;
+  fill: $secondary-text;
+  opacity: 0.8;
+  position: absolute;
+  top: 114%;
+  left: 47%;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(90deg);
+  }
+
+  &:focus {
+    opacity: 1;
+    transform: scale(1.1) rotate(90deg);
+  }
+}
+
+.section_destinations__photo--container {
+  position: relative;
+  height: 346px;
+}
+
+.section_destinations__photo--container .button_book_now {
+  visibility: hidden;
+}
+
+.section_destinations__photo--container:hover  .button_book_now {
+  visibility: visible;
+}
+
+.section_destinations__photo--container:hover  .photo_resort {
+  filter: brightness(75%);
+}
+
+.button_book_now {
+  width: 140px;
+  height: 47px;
+  fill: $primary;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+
+  &:hover {
+    fill: $primary-dark;
+    color: $general-white;
+  }
+}
+
+/*footer*/
+
+.footer {
+  background-color: $primary-dark;
+  width: 100%;
+  min-height: 630px;
+}
+
+.footer__content {
+  max-width: 1130px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -8px 0;
+}
+
+.footer__content--list {
+  margin: 120px 8px 40px;
+  max-width: 400px;
+}
+
+.list_text:first-of-type {
+  font-weight: 500;
+}
+
+.list_text {
+  font-weight: 400;
+  color: $general-white;
+  margin-bottom: 25px;
+  list-style-type: none;
+}
+
+.footer__copyright_text {
+  font-size: 7rem;
+  line-height: 8rem;
+  color: $general-white;
+}
