@@ -3,14 +3,329 @@
 
 @import './pages/index';
 
+/*top_section*/
+
+.top_section {
+  max-height: 902px;
+  padding-top: 1px;
+  background-color: $primary-dark;
+  background-image: url('../../src/assets/images/background_image.jpg');
+  background-position: top;
+  @media only screen and (max-width: 1024px) {
+    max-height: none;
+  }
+}
+
+.top_section__header {
+  max-width: 1232px;
+  max-height: 46px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: 1024px) {
+    max-width: 100%;
+    max-height: none;
+  }
+}
+
+.top_section--logo {
+  max-width: 207px;
+  max-height: 45px;
+  fill: $primary;
+  @media only screen and (max-width: 480px) {
+    width: 122px;
+    height: 24px;
+  }
+}
+
+.top_section__nav {
+  max-width: 340px;
+  max-height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+  }
+}
+
+.top_section__nav--link {
+  display: flex;
+  flex-direction: column;
+}
+
+.stays {
+  color: $general-white;
+  margin-right: 24px;
+  padding-top: 5px;
+  height: 46px;
+  position: relative;
+  top: 5px;
+  transition: 0.5s;
+  &:hover::after {
+    content: '';
+    display: block;
+    background-color: $secondary;
+    width: 50px;
+    height: 4px;
+    border: none;
+    position: relative;
+    top: 12px;
+    left: 4px;
+  }
+}
+
+.attractions {
+  color: $general-white;
+  margin-right: 24px;
+  padding-top: 5px;
+  height: 46px;
+  position: relative;
+  top: 5px;
+  transition: 0.5s;
+  &:hover::after {
+    content: '';
+    display: block;
+    background-color: $secondary;
+    width: 110px;
+    height: 4px;
+    border: none;
+    position: relative;
+    top: 12px;
+    left: 4px;
+  }
+}
+
+.top_section__nav--settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top_section--menu_mobile {
+  display: none;
+}
+
+.top_section__settings--night_button {
+  fill: $general-white;
+  width: 30px;
+  margin-right: 24px;
+  @media only screen and (max-width: 480px) {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+}
+
+.top_section__settings--account_circle {
+  fill: $general-white;
+  width: 40px;
+  @media only screen and (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+    margin: 0 16px;
+  }
+}
+
+.top_section__title {
+  max-width: 542px;
+  max-height: 118px;
+  margin: 200px 2px 0;
+  @media only screen and (max-width: 768px) {
+    max-width: 400px;
+    max-height: 90px;
+    margin: 50px auto 31px;
+  }
+  @media only screen and (max-width: 480px) {
+    max-width: 328px;
+    max-height: 70px;
+    margin: 50px auto 31px;
+  }
+}
+
+.top_section__title--text {
+  font-weight: 500;
+  font-size: 25rem;
+  line-height: 30rem;
+  color: $general-white;
+  @media only screen and (max-width: 768px) {
+    font-size: 15rem;
+    line-height: 25rem;
+    font-weight: 500;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 10rem;
+    line-height: 18rem;
+    font-weight: 500;
+  }
+}
+
+.top_section__form {
+  max-width: 1264px;
+  max-height: 100%;
+  margin-top: 145px;
+  display: flex;
+  border-radius: 8px;
+  background-color: $general-white;
+  justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    margin: 0 auto 40px;
+    max-width: 100%;
+    max-height: 100%;
+    flex-flow: column nowrap;
+    background-color: $secondary;
+    border: 4px solid $secondary;
+  }
+  @media only screen and (max-width: 480px) {
+    margin: 0 auto 40px;
+    max-width: none;
+    max-height: none;
+    flex-flow: column nowrap;
+    background-color: $secondary;
+    border: 4px solid $secondary;
+  }
+}
+
+.form_input {
+  flex-grow: 1;
+  width: 100%;
+  height: 64px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    border: 4px solid $secondary;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    max-height: 54px;
+  }
+}
+
+.top_section__form--input_container {
+  position: relative;
+  max-width: 420px;
+  display: flex;
+  flex-grow: 1;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+  }
+}
+
+.input_label {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.top_section__form_input--destination {
+  width: 100%;
+  padding-left: 30px;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+  }
+}
+
+.input_destination--label {
+  position: absolute;
+  bottom: 138%;
+  left: 7%;
+  color: $general-white;
+}
+
+.form_calendar__container {
+  max-width: 259px;
+  border: 3px solid $secondary;
+  border-radius: 8px;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+  }
+}
+
+.top_section__form_input--calendar {
+  max-width: 100%;
+  max-height: 55px;
+}
+
+.input_calendar--label {
+  position: absolute;
+  bottom: 148%;
+  left: 8%;
+  color: $general-white;
+}
+
+.top_section__form_input--calendar_2 {
+  max-width: 100%;
+  max-height: 55px;
+}
+
+.input_label--calendar_2 {
+  position: absolute;
+  bottom: 148%;
+  left: 37%;
+  color: $general-white;
+}
+
+.top_section__form_input--booking_places {
+  width: 100%;
+}
+
+.top_section__form_input--button {
+  max-width: 188px;
+  background-color: $primary;
+  color: $general-white;
+  margin-left: 4px;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+  }
+}
+
+.top_section__shops{
+  width: 100%;
+  margin: 120px auto;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.top_section__shops--google {
+  max-width: 135px;
+  max-height: 40px;
+  @media only screen and (max-width: 480px) {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.top_section__shops--apple {
+  padding-left: 20px;
+  max-width:  118px;
+  max-height: 38px;
+  @media only screen and (max-width: 480px) {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 10px;
+  }
+}
+
 /*offer*/
 
 .offer__content {
   margin: 0 -8px 109px;
   max-width: 1264px;
-  height: 193px;
+  max-height: 193px;
   display: flex;
   align-items: baseline;
+  @media only screen and (max-width: 1024px) {
+    max-height: none;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .offer__content--svg_icon {
@@ -20,7 +335,7 @@
   margin-bottom: 56px;
 }
 
-.offer__content--link {
+.offer--link {
   color: $primary-text;
 }
 
@@ -28,8 +343,6 @@
 
 .section_homes {
   background-color: $background;
-  width: 100vw;
-  max-height: 828px;
 }
 
 .section_homes__content {
@@ -37,7 +350,20 @@
   max-width: 1264px;
   align-items: start;
   position: relative;
-  height: 555px;
+  max-height: 555px;
+  @media only screen and (max-width: 1024px) {
+    max-height: none;
+    align-items: center;
+  }
+}
+
+.photo_hotel {
+  max-width: 300px;
+  max-height: 300px;
+  @media only screen and (max-width: 1300px) {
+    max-width: 240px;
+
+  }
 }
 
 .section_homes__content--hotel_location {
@@ -49,23 +375,7 @@
   font-weight: normal;
 }
 
-.section_homes__button--arrow {
-  width: 48px;
-  height: 48px;
-  fill: $secondary-text;
-  opacity: .8;
-  position: absolute;
-  top: 23%;
-  right: 0;
-
-    &:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-}
-
 /*section destination*/
-
 
 .section_destinations__form {
   max-width: 620px;
@@ -102,30 +412,20 @@
   position: relative;
 }
 
-.section_destinations__button--arrow {
-  transform: rotate(90deg);
-  width: 48px;
-  height: 48px;
-  fill: $secondary-text;
-  opacity: 0.8;
-  position: absolute;
-  top: 114%;
-  left: 47%;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1.1) rotate(90deg);
-  }
-
-  &:focus {
-    opacity: 1;
-    transform: scale(1.1) rotate(90deg);
+.photo_resort {
+  max-width: 300px;
+  max-height: 300px;
+  @media only screen and (max-width: 1300px) {
+    max-width: 240px;
   }
 }
 
 .section_destinations__photo--container {
   position: relative;
-  height: 346px;
+  max-height: 346px;
+  @media only screen and (max-width: 1024px) {
+    max-height: none;
+  }
 }
 
 .section_destinations__photo--container .button_book_now {
@@ -147,10 +447,15 @@
   position: absolute;
   top: 35%;
   left: 25%;
-
   &:hover {
     fill: $primary-dark;
     color: $general-white;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 150px;
+    height: 60px;
+    top: 15%;
+    left: 10%;
   }
 }
 
@@ -158,8 +463,11 @@
 
 .footer {
   background-color: $primary-dark;
-  width: 100%;
-  min-height: 630px;
+  max-width: 100%;
+  max-height: 630px;
+  @media only screen and (max-width: 1024px) {
+    max-height: none;
+  }
 }
 
 .footer__content {
@@ -190,3 +498,5 @@
   line-height: 8rem;
   color: $general-white;
 }
+
+
