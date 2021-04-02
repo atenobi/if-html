@@ -1,0 +1,11 @@
+mixin singIn()
+    section.sing_in_section
+        .container
+            svg.sing_in_section--cross_svg
+                use(href='#cross')
+            .sing_in_section__content
+                svg.sing_in_section__content--user
+                    use(href='#user')
+                form.sing_in_section__content--form
+                    span.sing_in_section__form--title.text_lg Sign up and get 20% off your first booking
+                    input.sing_in_section__form--button.text_md(type='button', value='Sing up')

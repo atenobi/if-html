@@ -1,0 +1,48 @@
+mixin topSection()
+    header.top_section.block_body
+        .container
+            .top_section__header
+                .top_section__logo--container
+                    a(href="/")
+                        svg.top_section--logo
+                            use(href="#logo_triphouse")
+                .top_section__nav
+                    .top_section__nav--link
+                        a.text_no_decor.text_lg.stays(href="#") Stays
+                    .top_section__nav--link
+                        a.text_no_decor.text_lg.attractions(href="#") Attractions
+                    .top_section__nav--settings
+                        a(href="#")
+                            svg.top_section__settings--night_button
+                                use(href="#night_button")
+                        a(href="#")
+                            svg.top_section__settings--account_circle
+                                use(href="#account_circle")
+            .top_section__content
+                .top_section__title
+                    h1.top_section__title--text Discover stays to live, work or just relax
+                .top_section__form.col-sm-6
+                    .top_section__form--input_container
+                        input.form_input.text_sm.top_section__form_input--destination(placeholder="New York", id="destination")
+                        label.input_label.input_destination--label.text_sm(for="destination") Your destination or hotel name
+                    .top_section__form--input_container.form_calendar__container
+                        label.input_label.text_sm.input_calendar--label(for="calendar1") Check-in —
+                        input.form_input.text_sm.top_section__form_input--calendar(id="calendar1", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
+                        label.input_label.text_sm.input_label--calendar_2(for="calendar2") — Check-out
+                        input.form_input.form_input.top_section__form_input--calendar_2(id="calendar2", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
+                    .top_section__form--input_container
+                        select.form_input.text_sm(id="places")
+                            option(selected, value="1 Adults — 0 Children — 1 Room") Adults — 0 Children — 1 Room
+                            option (value="2 Adults — 0 Children — 1 Room") Adults — 0 Children — 1 Room
+                            option (value="2 Adults — 1 Children — 1 Room") Adults — 1 Children — 1 Room
+                            option (value="2 Adults — 1 Children — 2 Room") Adults — 1 Children — 2 Room
+                            option (value="2 Adults — 2 Children — 2 Room") Adults — 2 Children — 2 Room
+                            option (value="3 Adults — 2 Children — 3 Room") Adults — 2 Children — 3 Room
+                        label.input_label.display_none_lg(for="places")
+                    .top_section__form--input_container
+                        input.form_input.text_lg.top_section__form_input--button(type="button", value="Search")
+                .top_section__shops
+                    svg.top_section__shops--google
+                        use(href="#google_market")
+                    svg.top_section__shops--apple
+                        use(href="#app_store")

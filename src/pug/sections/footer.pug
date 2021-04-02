@@ -1,31 +1,28 @@
 mixin footer()
-
-footer.footer.block_body
-    .container.col-lg-12.col-sm-6
-        .footer__content
-            .footer__content--list.col-lg-3.col-sm-2
-                mixin li(footer_list)
-                    li.list_text.text_md= footer_list
-                ul
-                    +li('About')
-                    +li('How Triphouse works')
-                    +li('Careers')
-                    +li('Privacy')
-                    +li('Terms')
-            .footer__content--list.col-lg-3.col-sm-2
-                ul
-                    +li('Property types')
-                    +li('Guest houses')
-                    +li('Hotels')
-                    +li('Apartments')
-                    +li('Villas')
-                    +li('Holiday homes')
-                    +li('Hostels')
-            .footer__content--list.col-lg-3.col-sm-2
-                ul
-                    +li('Support')
-                    +li('Contact Customer Service')
-                    +li('FAQ')
-        div
-            p.footer__copyright_text &copy;2020 Triphouse, Inc. All rights reserved
+    footer.footer.block_body
+        .container.col-lg-12.col-sm-6
+            .footer__content
+                .footer__content--list.col-lg-3.col-sm-2
+                   ul
+                        +List('About')
+                        +List('How Triphouse works')
+                        +List('Careers')
+                        +List('Privacy')
+                        +List('Terms')
+                .footer__content--list.col-lg-3.col-sm-2
+                    ul
+                        +List('Property types')
+                        +List('Guest houses')
+                        +List('Hotels')
+                        +List('Apartments')
+                        +List('Villas')
+                        +List('Holiday homes')
+                        +List('Hostels')
+                .footer__content--list.col-lg-3.col-sm-2
+                     ul
+                        +List('Support')
+                        +List('Contact Customer Service')
+                        +List('FAQ')
+            div
+                p.footer__copyright_text &copy;2020 Triphouse, Inc. All rights reserved
 

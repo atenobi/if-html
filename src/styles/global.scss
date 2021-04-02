@@ -10,7 +10,7 @@ $grey300: #4D4D4D;
 $stroke: #F3F3F4;
 $background: #EAF0F9;
 
-$col-lg-width: calc(100% / 12);
+$col-lg-width: 100% / 12;
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -28,17 +28,17 @@ html {
   }
 }
 
-.col-lg-1 { width: var(--col-lg-width);}
-.col-lg-2 { width: calc(var(--col-lg-width) * 2);}
-.col-lg-3 { width: calc(var(--col-lg-width) * 3);}
-.col-lg-4 { width: calc(var(--col-lg-width) * 4);}
-.col-lg-5 { width: calc(var(--col-lg-width) * 5);}
+.col-lg-1 { width: $col-lg-width;}
+.col-lg-2 { width: $col-lg-width * 2;}
+.col-lg-3 { width: $col-lg-width * 3;}
+.col-lg-4 { width: $col-lg-width * 4;}
+.col-lg-5 { width: $col-lg-width * 5;}
 .col-lg-6 { width: 50%;}
-.col-lg-7 { width: calc(var(--col-lg-width) * 7);}
-.col-lg-8 { width: calc(var(--col-lg-width) * 8);}
-.col-lg-9 { width: calc(var(--col-lg-width) * 9);}
-.col-lg-10 { width: calc(var(--col-lg-width) * 10);}
-.col-lg-11 { width: calc(var(--col-lg-width) * 2);}
+.col-lg-7 { width: $col-lg-width * 7;}
+.col-lg-8 { width: $col-lg-width * 8;}
+.col-lg-9 { width: $col-lg-width * 9;}
+.col-lg-10 { width: $col-lg-width * 10;}
+.col-lg-11 { width: $col-lg-width * 2;}
 .col-lg-12 { width: 100%;}
 
 .block_body {
@@ -52,14 +52,13 @@ html {
 
 .container {
   max-width: 1264px;
-  height: 100%;
   margin: 0 auto;
   padding: 0 16px;
   @media only screen and (max-width: 1024px) {
     max-width: 1150px;
   }
   @media only screen and (max-width: 767px) {
-  max-width: 730px;
+    max-width: 730px;
   }
   @media only screen and (max-width: 480px) {
   max-width: none;
@@ -121,6 +120,14 @@ html {
   display: flex;
   align-items: start;
   flex-direction: column;
+}
+
+.col_for_3 {
+  margin: 19px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $background;
 }
 
 .text_no_decor {

@@ -1,3 +1,14 @@
+include ../sections/footer
+include ../sections/topSection
+include ../sections/offer
+include ../sections/homes
+include ../sections/destinations
+include ../sections/singIn
+include ../sections/guestReviews
+
+include ../mixins/footerList
+include ../mixins/photoName
+
 doctype html
 head
   meta(charset='UTF-8')
@@ -100,159 +111,10 @@ body
         |
         symbol#magnifying_glass(viewbox='0 0 16 16')
             path(d='M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 001.437-3.87 5.946 5.946 0 10-5.947 5.947 5.92 5.92 0 003.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 011.83 5.946 4.111 4.111 0 015.946 1.83a4.111 4.111 0 014.117 4.116 4.111 4.111 0 01-4.117 4.117z')
-header.top_section.block_body
-    .container
-        .top_section__header
-            .top_section__logo--container
-                a(href="/")
-                    svg.top_section--logo
-                        use(href="#logo_triphouse")
-            .top_section__nav
-                 .top_section__nav--link
-                    a.text_no_decor.text_lg.stays(href="#") Stays
-                 .top_section__nav--link
-                    a.text_no_decor.text_lg.attractions(href="#") Attractions
-                 .top_section__nav--settings
-                    a(href="#")
-                        svg.top_section__settings--night_button
-                             use(href="#night_button")
-                    a(href="#")
-                        svg.top_section__settings--account_circle
-                            use(href="#account_circle")
-        .top_section__content
-            .top_section__title
-                h1.top_section__title--text Discover stays to live, work or just relax
-            .top_section__form.col-sm-6
-                .top_section__form--input_container
-                    input.form_input.text_sm.top_section__form_input--destination(placeholder="New York", id="destination")
-                    label.input_label.input_destination--label.text_sm(for="destination") Your destination or hotel name
-                .top_section__form--input_container.form_calendar__container
-                    label.input_label.text_sm.input_calendar--label(for="calendar1") Check-in —
-                    input.form_input.text_sm.top_section__form_input--calendar(id="calendar1", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
-                    label.input_label.text_sm.input_label--calendar_2(for="calendar2") — Check-out
-                    input.form_input.form_input.top_section__form_input--calendar_2(id="calendar2", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
-                .top_section__form--input_container
-                    select.form_input.text_sm(id="places")
-                        option(selected, value="1 Adults — 0 Children — 1 Room") Adults — 0 Children — 1 Room
-                        option (value="2 Adults — 0 Children — 1 Room") Adults — 0 Children — 1 Room
-                        option (value="2 Adults — 1 Children — 1 Room") Adults — 1 Children — 1 Room
-                        option (value="2 Adults — 1 Children — 2 Room") Adults — 1 Children — 2 Room
-                        option (value="2 Adults — 2 Children — 2 Room") Adults — 2 Children — 2 Room
-                        option (value="3 Adults — 2 Children — 3 Room") Adults — 2 Children — 3 Room
-                    label.input_label.display_none_lg(for="places")
-                .top_section__form--input_container
-                    input.form_input.text_lg.top_section__form_input--button(type="button", value="Search")
-            .top_section__shops
-                svg.top_section__shops--google
-                    use(href="#google_market")
-                svg.top_section__shops--apple
-                    use(href="#app_store")
-
-section.offer.block_body
-    .container
-        .offer_title.title_container
-            h5.title--text What do we offer
-        .offer__content.row.sectiom_md__content.col_sm
-            .offer__svg_container.col.col-lg-3.col-md-3.col-sm-6
-                 svg.offer__content--svg_icon
-                    use(href="#head_set")
-                 a.offer--link.text_no_decor.text_lg(href="#") Support 24/7
-            .offer__svg_container.col.col-lg-3.col-md-3.col-sm-6
-                svg.offer__content--svg_icon
-                    use(href="#chat")
-                a.offer--link.text_no_decor.text_lg(href="#") Communicate directly
-            .offer__svg_container.col.col-lg-3.col-md-3.col-sm-6
-                svg.offer__content--svg_icon
-                    use(href="#note_book")
-                a.offer--link.text_no_decor.text_lg(href="#") Book online
-            .offer__svg_container.col.col-lg-3.col-md-3.col-sm-6
-                svg.offer__content--svg_icon
-                    use(href="#like")
-                a.offer--link.text_no_decor.text_lg(href="#") Real guest reviews
-
-section.section_homes.block_body
-    .container
-        .title_container
-            h5.title--text Homes guests loves
-        .section_homes__content.row.section_md__content
-            .col_for_4_item.col-lg-3.col-md-3
-                img.photo_hotel(src='../src/assets/images/hotel_leopold.jpg', alt='hotel leopold')
-                a.photo_name.text_lg(href="#") Hotel Leopold
-                span.section_homes__content--hotel_location.text_lg.text_md_480 Saint Petersburg, Russia
-
-            .col_for_4_item.col-lg-3.col-md-3
-                img.photo_hotel(src='../src/assets/images/apartment%20_sunshine.jpg', alt='apartment sunshine')
-                a.photo_name.text_lg(href="#") Apartment Sunshine
-                span.section_homes__content--hotel_location.text_lg.text_md_480Santa Cruz de Tenerife, Spain
-
-            .col_for_4_item.col-lg-3.col-md-3
-                img.photo_hotel(src='../src/assets/images/villa_kunerad.jpg', alt='villa kunerad')
-                a.photo_name.text_lg(href="#") Villa Kunerad
-                span.section_homes__content--hotel_location.text_lg.text_md_480 Vysokie Tatry, Slowakia
-
-            .col_for_4_item.col-lg-3.col-md-3
-                img.photo_hotel(src='../src/assets/images/hostel_friendship.jpg', alt='hostel friendship')
-                a.photo_name.text_lg(href="#") Hostel Friendship
-                span.section_homes__content--hotel_location.text_lg.text_md_480 Berlin, Germany
-
-
-section.section_destinations
-    .container
-        .title_container
-            h5.title--text The best destinations
-        div
-            form.section_destinations__form.col-sm-6
-                input.section_destinations__form--button.text_lg.text_sm(type='button', value='Regions')
-                input.section_destinations__form--button.text_lg.text_sm(type='button', value='Cities')
-                input.section_destinations__form--button.text_lg.text_sm(type='button', value='Places of interest')
-        .section_destinations__content.row.section_md__content
-            .section_destinations__photo--container.col_for_4_item.col-lg-3
-                img.photo_resort.photo_md(src='../src/assets/images/maldives.jpg', alt='maldives')
-                span.photo_name.text_lg Maldives
-                svg.button_book_now.text_sm.display_none
-                    use(href='#button_book_now')
-            .section_destinations__photo--container.col_for_4_item.col-lg-3
-                img.photo_resort.photo_md(src='../src/assets/images/spain.jpg', alt='spain')
-                span.photo_name.text_lg Spain
-                svg.button_book_now.text_sm.display_none
-                    use(href='#button_book_now')
-            .section_destinations__photo--container.col_for_4_item.col-lg-3
-                img.photo_resort.photo_md(src='../src/assets/images/norway.jpg', alt='norway')
-                span.photo_name.text_lg Norway
-                svg.button_book_now.text_sm.display_none
-                    use(href='#button_book_now')
-            .section_destinations__photo--container.col_for_4_item.col-lg-3
-                img.photo_resort.photo_md(src='../src/assets/images/island.jpg', alt='island')
-                span.photo_name.text_lg Island
-                svg.button_book_now.text_sm.display_none
-                    use(href='#button_book_now')
-
-
-footer.footer.block_body
-    .container.col-lg-12.col-sm-6
-        .footer__content
-            .footer__content--list.col-lg-3.col-sm-2
-                mixin li(footer_list)
-                    li.list_text.text_md= footer_list
-                ul
-                    +li('About')
-                    +li('How Triphouse works')
-                    +li('Careers')
-                    +li('Privacy')
-                    +li('Terms')
-            .footer__content--list.col-lg-3.col-sm-2
-                 ul
-                    +li('Property types')
-                    +li('Guest houses')
-                    +li('Hotels')
-                    +li('Apartments')
-                    +li('Villas')
-                    +li('Holiday homes')
-                    +li('Hostels')
-            .footer__content--list.col-lg-3.col-sm-2
-                ul
-                    +li('Support')
-                    +li('Contact Customer Service')
-                    +li('FAQ')
-        div
-            p.footer__copyright_text &copy;2020 Triphouse, Inc. All rights reserved
++topSection
++offer
++homes
++destinations
++singIn
++guestReviews
++footer
