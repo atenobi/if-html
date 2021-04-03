@@ -20,7 +20,7 @@ mixin topSection()
                                 use(href="#account_circle")
             .top_section__content
                 .top_section__title
-                    h1.top_section__title--text Discover stays to live, work or just relax
+                    h1.top_section__title--text Discover stays <br/> to live, work or just relax
                 .top_section__form.col-sm-6
                     .top_section__form--input_container
                         input.form_input.text_sm.top_section__form_input--destination(placeholder="New York", id="destination")
@@ -29,7 +29,7 @@ mixin topSection()
                         label.input_label.text_sm.input_calendar--label(for="calendar1") Check-in —
                         input.form_input.text_sm.top_section__form_input--calendar(id="calendar1", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
                         label.input_label.text_sm.input_label--calendar_2(for="calendar2") — Check-out
-                        input.form_input.form_input.top_section__form_input--calendar_2(id="calendar2", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
+                        input.form_input.text_sm.top_section__form_input--calendar_2(id="calendar2", type="date", min="01.01.2020", max="01.01.2030", value="01.01.2021")
                     .top_section__form--input_container
                         select.form_input.text_sm(id="places")
                             option(selected, value="1 Adults — 0 Children — 1 Room") Adults — 0 Children — 1 Room
