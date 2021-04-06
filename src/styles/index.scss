@@ -3,7 +3,7 @@
 
 @import './pages/index';
 
-/*top_section*/
+/*top section*/
 
 .top_section {
   max-height: 902px;
@@ -54,6 +54,9 @@
 .top_section__nav--link {
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 .stays {
@@ -103,6 +106,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-left: 25px;
+  @media only screen and (max-width: 1024px) {
+    margin-left: 0;
+  }
 }
 
 .top_section--menu_mobile {
@@ -113,6 +120,10 @@
   fill: $general-white;
   width: 30px;
   margin-right: 24px;
+  &:hover {
+    transform: scale(1.3);
+    fill: $secondary;
+  }
   @media only screen and (max-width: 480px) {
     width: 16px;
     height: 16px;
@@ -123,6 +134,10 @@
 .top_section__settings--account_circle {
   fill: $general-white;
   width: 40px;
+  &:hover {
+    transform: scale(1.3);
+    fill: $secondary;
+  }
   @media only screen and (max-width: 480px) {
     width: 24px;
     height: 24px;
@@ -196,6 +211,7 @@
   border: none;
   border-radius: 8px;
   outline: none;
+  cursor: pointer;
   @media only screen and (max-width: 768px) {
     width: 100%;
     margin: 0;
@@ -209,7 +225,7 @@
 
 .top_section__form--input_container {
   position: relative;
-  max-width: 420px;
+  max-width: 380px;
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
@@ -251,6 +267,7 @@
 .top_section__form_input--calendar {
   max-width: 100%;
   max-height: 55px;
+  font-size: 7em;
 }
 
 .input_calendar--label {
@@ -263,6 +280,7 @@
 .top_section__form_input--calendar_2 {
   max-width: 100%;
   max-height: 55px;
+  font-size: 7em;
 }
 
 .input_label--calendar_2 {
@@ -272,14 +290,23 @@
   color: $general-white;
 }
 
-.top_section__form_input--booking_places {
-  width: 100%;
+.top_section__form--list {
+  max-width:340px;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+  }
 }
 
 .top_section__form_input--button {
   max-width: 188px;
   background-color: $primary;
   color: $general-white;
+  &:hover {
+    background-color: $primary-dark;
+    color: $general-white;
+  }
   @media only screen and (max-width: 1024px) {
     max-width: none;
   }
@@ -291,6 +318,10 @@
   padding-bottom: 120px;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    margin: 40px auto;
+    padding: 0;
+  }
 }
 
 .top_section__shops--google {
@@ -312,7 +343,6 @@
     padding-left: 10px;
   }
 }
-
 /*offer*/
 
 .offer__content {
@@ -337,46 +367,73 @@
 
 .offer--link {
   color: $primary-text;
+  text-align: center;
+  &:hover  {
+    color: $primary;
+    box-shadow: 0 1px 1px $primary-dark;
+  }
+  &:focus  {
+    color: $primary;
+  }
 }
 
 /*section homes*/
 
 .section_homes {
   background-color: $background;
-  height: 830px;
+  max-height: 830px;
+  padding-bottom: 40px;
   @media only screen and (max-width: 1024px) {
     max-height: none;
+    padding: 40px 0;
   }
 }
 
 .section_homes__content {
-  margin: 30px -20px 0 0;
   max-width: 1264px;
-  align-items: start;
   position: relative;
   max-height: 555px;
   @media only screen and (max-width: 1024px) {
     max-height: none;
     align-items: center;
-  }
-}
-
-.photo_hotel {
-  max-width: 300px;
-  max-height: 300px;
-  @media only screen and (max-width: 1300px) {
-    max-width: 240px;
-
+    justify-content: center;
   }
 }
 
 .section_homes__content--hotel_location {
   display: block;
+  width: 95%;
   color: $secondary-text;
   opacity: 0.8;
   margin-top: 30px;
   font-style: normal;
   font-weight: normal;
+}
+
+.homes__svg {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.homes--arrow_button {
+  background-color: $stroke;
+  border-radius: 50%;
+  fill: $primary-text;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 125px;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 0 15px $primary-dark;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 /*section destination*/
@@ -386,6 +443,9 @@
   height: 60px;
   display: flex;
   margin-bottom: 70px;
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
 .section_destinations__form--button {
@@ -397,7 +457,6 @@
   border-radius: 8px;
   border: none;
   outline: none;
-  transition: 500ms;
   padding-right: 25px;
 
   &:hover {
@@ -412,15 +471,11 @@
 }
 
 .section_destinations__content {
-  margin: 0 -16px 220px 0;
   position: relative;
-}
-
-.photo_resort {
-  max-width: 300px;
-  max-height: 300px;
-  @media only screen and (max-width: 1300px) {
-    max-width: 240px;
+  @media only screen and (max-width: 1024px) {
+    max-height: none;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -428,7 +483,7 @@
   position: relative;
   max-height: 346px;
   @media only screen and (max-width: 1024px) {
-    max-height: none;
+    max-height: 95%;
   }
 }
 
@@ -463,12 +518,38 @@
   }
 }
 
+.destinations__svg {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.destinations--arrow_button {
+  background-color: $stroke;
+  border-radius: 50%;
+  fill: $primary-text;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 90px;
+  right: 610px;
+  padding: 10px;
+  transform: rotate(90deg);
+  box-shadow: 0 0 15px $primary-dark;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1) rotate(90deg);
+  }
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
 /*sing in*/
 
 .sing_in_section {
   max-width: 1232px;
   height: 200px;
-  background-color: $background;
   margin: 0 auto -4px;
   position: relative;
   @media only screen and (max-width: 1024px) {
@@ -483,12 +564,15 @@
   position: absolute;
   left: 96%;
   bottom: 80%;
-  transition: 500ms;
   &:hover {
     transform: scale(1.1);
+    border: 1px dotted $secondary-text;
+    border-radius: 50%;
   }
   &:focus {
     transform: scale(1.1);
+    border: 1px dotted $secondary-text;
+    border-radius: 50%;
   }
 }
 
@@ -530,7 +614,6 @@
   border: 1px solid $primary;
   background-color: $general-white;
   outline: none;
-  transition: 500ms;
   &:hover {
     background-color: $primary-dark;
     color: $general-white;

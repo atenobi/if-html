@@ -17,6 +17,7 @@ $col-lg-width: 100% / 12;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  //border: 1px solid red;
 }
 
 html {
@@ -30,7 +31,11 @@ html {
 
 .col-lg-1 { width: $col-lg-width;}
 .col-lg-2 { width: $col-lg-width * 2;}
-.col-lg-3 { width: $col-lg-width * 3;}
+.col-lg-3 { width: $col-lg-width * 3;
+  @media only screen and (max-width: 768px) {
+    width: $col-lg-width * 6;
+  }
+}
 .col-lg-4 { width: $col-lg-width * 4;}
 .col-lg-5 { width: $col-lg-width * 5;}
 .col-lg-6 { width: 50%;}
@@ -38,7 +43,7 @@ html {
 .col-lg-8 { width: $col-lg-width * 8;}
 .col-lg-9 { width: $col-lg-width * 9;}
 .col-lg-10 { width: $col-lg-width * 10;}
-.col-lg-11 { width: $col-lg-width * 2;}
+.col-lg-11 { width: $col-lg-width * 11;}
 .col-lg-12 { width: 100%;}
 
 .block_body {
@@ -84,18 +89,23 @@ html {
   max-width: 400px;
   max-height: 50px;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    margin: 40px auto;
+  }
 }
 
 .row{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  margin: 0 -8px;
   @media only screen and (max-width: 1024px) {
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   @media only screen and (max-width: 768px) {
-    flex-direction: column;
   }
 }
 
@@ -111,23 +121,7 @@ html {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-}
-
-.col_for_4_item {
-  flex-grow: 1;
-  max-width: 400px;
-  max-height: 480px;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-}
-
-.col_for_3 {
-  margin: 19px 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: $background;
+  margin: 8px;
 }
 
 .text_no_decor {
@@ -185,6 +179,9 @@ html {
     position: relative;
     top: 20px;
     left: calc(100% / 2 - 50px);
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
   @media only screen and (max-width: 480px) {
     font-size: 9rem;
@@ -192,9 +189,29 @@ html {
   }
 }
 
+.photo_location {
+  max-width: 300px;
+  max-height: 300px;
+  @media only screen and (max-width: 1300px) {
+    max-width: 95%;
+  }
+}
+
 .photo_name {
   display: block;
+  width: 95%;
   text-decoration: none;
   color: $primary;
   margin-top: 25px;
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+.buttons {
+  transition: 500ms;
+}
+
+.background_blue {
+  background-color: $background;
 }
