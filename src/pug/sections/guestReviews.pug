@@ -5,7 +5,7 @@ mixin guestReviews()
                 h5.title--text Guests reviews
             .guests_reviews__content.row
 
-                .col.col-lg-4.background_blue
+                .col.col-lg-4.guest_review__col.background_blue
                     .guests_reviews__photo
                         img.guest--photo_resort(src='../src/assets/images/bali.jpg', alt='bali')
                         span.guests_reviews--cost.text_sm From 250 USD
@@ -15,7 +15,7 @@ mixin guestReviews()
                             span.resort_score.text_sm 9,4
                         .row
                             span.guests_reviews--resort_loco.text_sm Bali, Indonesia
-                            span.resort_viewers 1324 reviews
+                            span.resort_viewers.text_sm 1324 reviews
                         .row_start
                             svg.guests_reviews--user_svg
                                 use(href='#user_review')
@@ -23,8 +23,9 @@ mixin guestReviews()
                                     span.text_sm Hanna Ivanova
                                     span.text_sm ua Ukraine
                         p.text_sm.guests_reviews--text Great location, really pleasant and clean rooms, but the thing that makes this such a good place to stay are the staff. All of the people are incredibly helpful and generous with their time and advice.
-
-                .col.col-lg-4.background_blue
+                    ._mobile_slider
+                        +mobile_slider
+                .col.col-lg-4.guest_review__col.background_blue.display_none_mobile
                     .guests_reviews__photo
                         img.guest--photo_resort(src='../src/assets/images/rotterdam.jpg', alt='rotterdam')
                         span.guests_reviews--cost.text_sm From 40 USD
@@ -34,7 +35,7 @@ mixin guestReviews()
                             span.resort_score.text_sm 8,9
                         .row
                             span.guests_reviews--resort_loco.text_sm Rotterdam, Netherlands
-                            span.resort_viewers 2016 reviews
+                            span.resort_viewers.text_sm 2016 reviews
                         .row_start
                             svg.guests_reviews--user_svg
                                 use(href='#user_review')
@@ -43,7 +44,7 @@ mixin guestReviews()
                                     span.text_sm &#127482;&#127480; USA
                         p.text_sm.guests_reviews--text I've been in this hostel for a month and here is the best hostel of all Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent Most importantly, those who work here are kind and good-natured.
 
-                .col.col-lg-4.background_blue
+                .col.col-lg-4.guest_review__col.background_blue.display_none_mobile
                     .guests_reviews__photo
                         img.guest--photo_resort(src='../src/assets/images/ourica.jpg', alt='ourica')
                         span.guests_reviews--cost.text_sm From 100 USD
@@ -53,7 +54,7 @@ mixin guestReviews()
                             span.resort_score.text_sm 9,1
                         .row
                             span.guests_reviews--resort_loco.text_sm Ourika, Marocco
-                            span.resort_viewers 815 reviews
+                            span.resort_viewers.text_sm 815 reviews
                         .row_start
                             svg.guests_reviews--user_svg
                                 use(href='#user_review')
@@ -61,4 +62,3 @@ mixin guestReviews()
                                     span.text_sm Anika Messer
                                     span.text_sm &#127465;&#127466; Germany
                         p.text_sm.guests_reviews--text Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy access to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location during my next stay in Marocco.
-

@@ -26,9 +26,9 @@ mixin topSection()
                         input.form_input.text_sm.top_section__form_input--destination(placeholder="New York", id="destination")
                         label.input_label.input_destination--label.text_sm(for="destination") Your destination or hotel name
                     .top_section__form--input_container.form_calendar__container
-                        label.input_label.text_sm.input_calendar--label(for="calendar1") Check-in —
+                        label.input_label.input_calendar--label.text_sm(for="calendar1") Check-in —
                         input.form_input.text_sm.top_section__form_input--calendar(id="calendar1", type="date", min="01.01.2020", max="01.01.2030", value="")
-                        label.input_label.text_sm.input_label--calendar_2(for="calendar2") — Check-out
+                        label.input_label.input_label--calendar_2.text_sm(for="calendar2") — Check-out
                         input.form_input.text_sm.top_section__form_input--calendar_2(id="calendar2", type="date", min="01.01.2020", max="01.01.2030", value="none")
                     .top_section__form--input_container.top_section__form--list
                         select.form_input.text_sm(id="places")

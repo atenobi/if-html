@@ -5,9 +5,11 @@ include ../sections/homes
 include ../sections/destinations
 include ../sections/singIn
 include ../sections/guestReviews
+include ../sections/singIn_mobile
 
 include ../mixins/footerList
 include ../mixins/photoName
+include ../mixins/mobileSliders
 
 doctype html
 head
@@ -100,10 +102,14 @@ body
         |
         symbol#magnifying_glass(viewbox='0 0 16 16')
             path(d='M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 001.437-3.87 5.946 5.946 0 10-5.947 5.947 5.92 5.92 0 003.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 011.83 5.946 4.111 4.111 0 015.946 1.83a4.111 4.111 0 014.117 4.116 4.111 4.111 0 01-4.117 4.117z')
+        |
+        symbol#circle(viewBox='0 0 8 8')
+            circle(cx='4', cy='4', r='3.5', stroke='#333')
 +topSection
 +offer
 +homes
 +destinations
-//+singIn
-//+guestReviews
-//+footer
++singIn
++guestReviews
++singIn_mobile
++footer

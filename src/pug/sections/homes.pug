@@ -8,18 +8,20 @@ mixin homes()
                     img.photo_location(src='../src/assets/images/hotel_leopold.jpg', alt='hotel leopold')
                     +photo_name('#', 'Hotel Leopold')(class="btn")
                     span.section_homes__content--hotel_location.text_lg.text_md_480 Saint Petersburg, Russia
+                    ._mobile_slider
+                        +mobile_slider
 
-                .col.col-lg-3
+                .col.col-lg-3.display_none_mobile
                     img.photo_location(src='../src/assets/images/apartment%20_sunshine.jpg', alt='apartment sunshine')
                     +photo_name('#', 'Apartment Sunshine')(class="btn")
                     span.section_homes__content--hotel_location.text_lg.text_md_480Santa Cruz de Tenerife, Spain
 
-                .col.col-lg-3
+                .col.col-lg-3.display_none_mobile
                     img.photo_location(src='../src/assets/images/villa_kunerad.jpg', alt='villa kunerad')
                     +photo_name('#', 'Villa Kunerad')(class="btn")
                     span.section_homes__content--hotel_location.text_lg.text_md_480 Vysokie Tatry, Slowakia
 
-                .col.col-lg-3
+                .col.col-lg-3.display_none_mobile
                     img.photo_location(src='../src/assets/images/hostel_friendship.jpg', alt='hostel friendship')
                     +photo_name('#', 'Hostel Friendship')(class="btn")
                     span.section_homes__content--hotel_location.text_lg.text_md_480 Berlin, Germany
