@@ -1,0 +1,40 @@
+mixin destinations()
+    section.section_destinations
+        .container
+            .title_container
+                h5.title--text The best destinations
+            div
+                form.section_destinations__form.col-sm-6
+                    input.section_destinations__form--button.text_lg.text_sm.buttons(type='button', value='Regions')
+                    input.section_destinations__form--button.text_lg.text_sm.buttons(type='button', value='Cities')
+                    input.section_destinations__form--button.text_lg.text_sm.buttons(type='button', value='Places of interest')
+            .section_destinations__content.row.section_md__content
+                .col.col-lg-3.section_destinations__photo--container
+                    img.photo_location(src='../src/assets/images/maldives.jpg', alt='maldives')
+                    +photo_name('#', 'Maldives')(class="btn")
+                    svg.button_book_now.text_sm.buttons
+                        use(href='#button_book_now')
+                    ._mobile_slider
+                        +mobile_slider
+
+                .col.col-lg-3.section_destinations__photo--container.display_none_mobile
+                    img.photo_location(src='../src/assets/images/spain.jpg', alt='spain')
+                    +photo_name('#', 'Spain')(class="btn")
+                    svg.button_book_now.text_sm.buttons
+                        use(href='#button_book_now')
+
+                .col.col-lg-3.section_destinations__photo--container.display_none_mobile
+                    img.photo_location(src='../src/assets/images/norway.jpg', alt='norway')
+                    +photo_name('#', 'Norway')(class="btn")
+                    svg.button_book_now.text_sm.buttons
+                        use(href='#button_book_now')
+
+                .col.col-lg-3.section_destinations__photo--container.display_none_mobile
+                    img.photo_location(src='../src/assets/images/island.jpg', alt='island')
+                    +photo_name('#', 'Island')(class="btn")
+                    svg.button_book_now.text_sm.buttons
+                        use(href='#button_book_now')
+                .col.destinations__svg
+                    button(value='slider')
+                        svg.destinations--arrow_button.buttons
+                            use(href='#arrow')

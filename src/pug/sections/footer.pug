@@ -1,0 +1,31 @@
+mixin footer()
+    footer.footer.block_body
+        .container.col-lg-12.col-sm-6
+            .footer__logo_container
+                svg.footer__logo--svg
+                    use(href='#logo_triphouse')
+            .footer__content
+                .footer__content--list.col-lg-3
+                   ul
+                        +List('About')
+                        +List('How Triphouse works')
+                        +List('Careers')
+                        +List('Privacy')
+                        +List('Terms')
+                .footer__content--list.col-lg-3
+                    ul
+                        +List('Property types')
+                        +List('Guest houses')
+                        +List('Hotels')
+                        +List('Apartments')
+                        +List('Villas')
+                        +List('Holiday homes')
+                        +List('Hostels')
+                .footer__content--list.col-lg-3
+                     ul
+                        +List('Support')
+                        +List('Contact Customer Service')
+                        +List('FAQ')
+            div
+                p.footer__copyright_text.text_sm &copy;2020 Triphouse, Inc. All rights reserved
+
