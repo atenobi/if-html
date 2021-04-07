@@ -1,0 +1,242 @@
+$primary: #3077C6;
+$primary-dark: #10367c;
+$secondary: #F5BD41;
+$general-white: #FFFFFF;
+$primary-text: #383838;
+$secondary-text: #BFBFBF;
+$grey100: #121212;
+$grey200: #1D1E1F;
+$grey300: #4D4D4D;
+$stroke: #F3F3F4;
+$background: #EAF0F9;
+
+$col-lg-width: 100% / 12;
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  //border: 1px solid red;
+}
+
+html {
+  font-size: 2px;
+  line-height: 2px;
+  @media only screen and (max-width: 480px) {
+    font-size: 3px;
+    line-height: 2px;
+  }
+}
+
+.col-lg-1 { width: $col-lg-width;}
+.col-lg-2 { width: $col-lg-width * 2;}
+.col-lg-3 { width: $col-lg-width * 3;
+  @media only screen and (max-width: 768px) {
+    width: $col-lg-width * 6;
+  }
+}
+.col-lg-4 { width: $col-lg-width * 4;
+  @media only screen and (max-width: 768px) {
+    width: $col-lg-width * 8;
+  }
+}
+.col-lg-5 { width: $col-lg-width * 5;}
+.col-lg-6 { width: 50%;}
+.col-lg-7 { width: $col-lg-width * 7;}
+.col-lg-8 { width: $col-lg-width * 8;}
+.col-lg-9 { width: $col-lg-width * 9;}
+.col-lg-10 { width: $col-lg-width * 10;}
+.col-lg-11 { width: $col-lg-width * 11;}
+.col-lg-12 { width: 100%;}
+
+.block_body {
+  max-width: 100vw;
+  margin: 0;
+  @media only screen and (max-width: 1024px) {
+    max-width: none;
+    max-height: none;
+  }
+}
+
+.container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0 16px;
+  @media only screen and (max-width: 1024px) {
+    max-width: 1150px;
+  }
+  @media only screen and (max-width: 767px) {
+    max-width: 730px;
+  }
+  @media only screen and (max-width: 480px) {
+  max-width: none;
+  }
+}
+
+.sprite{
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.title_container {
+  display: flex;
+  position: relative;
+  margin: 0 auto 30px;
+  padding: 120px 0;
+  max-width: 400px;
+  max-height: 50px;
+  justify-content: center;
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    margin: 40px auto;
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 -8px;
+  @media only screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: 768px) {
+  }
+}
+
+.row_start{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.text_no_decor {
+  text-decoration: none;
+}
+
+.text_lg {
+  font-size: 12rem;
+  line-height: 14rem;
+  @media only screen and (max-width: 1024px) {
+    font-size: 10rem;
+    line-height: 13rem;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 8rem;
+    line-height: 12rem;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 6rem;
+    line-height: 11rem;
+  }
+}
+
+.text_md {
+  font-size: 10rem;
+  line-height: 11rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+}
+
+.text_sm {
+  font-size: 9rem;
+  line-height: 11rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 4rem;
+    line-height: 7rem;
+  }
+}
+
+.title--text {
+  font-size: 20rem;
+  line-height: 24rem;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--primary-text);
+  position: relative;
+  &:hover:after {
+    content: '';
+    max-width: 100px;
+    height: 4px;
+    background-color: $secondary;
+    display: block;
+    position: relative;
+    top: 20px;
+    left: calc(100% / 2 - 50px);
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 9rem;
+    line-height: 16rem;
+  }
+}
+
+.photo_location {
+  max-width: 300px;
+  max-height: 300px;
+  @media only screen and (max-width: 1300px) {
+    max-width: 95%;
+  }
+}
+
+.photo_name {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: $primary;
+  margin-top: 25px;
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+.buttons {
+  transition: 500ms;
+}
+
+.background_blue {
+  background-color: $background;
+}
+
+._mobile_slider {
+  display: none;
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    width: 56px;
+    height: 8px;
+    margin: 15px auto;
+  }
+}
+
+._mobile_slider--button {
+  width: 8px;
+  height: 8px;
+  fill: $stroke;
+  &:hover {
+    fill: $primary-text;
+  }
+}
+
+.display_none_mobile {
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+}
